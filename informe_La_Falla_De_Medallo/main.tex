@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{cite}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{times}
+
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+
+\lstset{ frame=Ltb,
+framerule=0pt,
+aboveskip=0.5cm,
+framextopmargin=3pt,
+framexbottommargin=3pt,
+framexleftmargin=0.4cm,
+framesep=0pt,
+rulesep=.4pt,
+backgroundcolor=\color{gray97},
+rulesepcolor=\color{black},
+%
+stringstyle=\ttfamily,
+showstringspaces = false,
+basicstyle=\small\ttfamily,
+commentstyle=\color{gray45},
+keywordstyle=\bfseries,
+%
+numbers=left,
+numbersep=15pt,
+numberstyle=\tiny,
+numberfirstline = false,
+breaklines=true,
+}
+
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+{\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+\lstdefinestyle{consola}
+{basicstyle=\scriptsize\bf\ttfamily,
+backgroundcolor=\color{gray75},
+}
+
+\lstdefinestyle{C++}
+{language=C++}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{Proyecto Final: La Falla De Medallo}
+            
+        \vspace{0.5cm}
+        \LARGE
+        Informa 2 S.A.S.
+            
+        \vspace{1.5cm}
+            
+        \textbf{Juan José Baquero Arcila\\
+                Sebastián García Morales}
+
+        \vfill
+            
+        \vspace{0.8cm}
+            
+        \Large
+        Departamento de Ingeniería Electrónica y Telecomunicaciones\\
+        Universidad de Antioquia\\
+        Medellín\\
+        Abril 05 de 2022
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\section{Objetivos}\label{objetivos}
+\begin{itemize}
+    \item Aplicar los conocimientos adquiridos en el curso de informática II tanto en la parte teórica como en los laboratorios para diseñar un videojuego aplicando sistemas físicos en este.
+    \item Practicar el uso de la interfaz gráfica de QT y añadir recursos como imágenes, sonidos y texturas al juego.
+    \item Desarrollar habilidades de lógica y creatividad para realizar los diseños a ser implementados en el juego.
+    
+\end{itemize}
+\section{Introducción}\label{intro}
+El terremoto más fuerte en la historia de Colombia empezó, y tú estás estudiando en la universidad, ¿qué pasará? En la falla de Medellín queremos mostrarte como es que pensamos que podría ser este escenario en una ciudad como Medellín.\\
+
+Acá en la falla tendrás que pasar por diferentes lugares para poder salvar tu pellejo de la inminente destrucción que se avecina, corre horizontalmente para escapar del desastre evitando obstáculos y enemigos que cambian dependiendo del lugar en que te encuentres; mientras vas recogiendo víveres que te ayudaran a sobrevivir a esta catástrofe.
+
+
+\section{Descripción del juego:}\label{descripcion}
+
+\subsection{La Falla De Medellín.}
+
+El juego consistirá en un hipotético terremoto de 15 de magnitud en la escala de Richter en Medellín. Constará de tres niveles, en los cuales tendremos diferentes personas que se enfrentan a la situación de este terremoto en diferentes lugares, esquivando diferentes obstáculos y enfrentando enemigos durante el desastre que dejaría este. Los lugares serían la universidad, después el centro de la ciudad y por último sería el campo escapando de todo mal.\\
+
+En este juego se tendrá:
+
+\begin{itemize}
+    \item \textbf{Plataformas:} estas tendrán varias utilidades en el juego, un as de estas plataformas el jugador podrá estar quito mirando donde saltar, otras estarán en el escenario, pero en unos segundos después de que el personaje se posicione encima de ellas, se precipitaran al piso o al cráter formado por la falla, también servirán en algunas ocasiones de obstáculo que caen en forma de escombros desde el cielo en diferentes trayectorias, también se tendrán algunas plataformas especiales que servirán de trampolín para pasar a otros lugares que normalmente no se podrían con un salto normal.
+    \item \textbf{Obstáculos:} 
+    \item \textbf{Enemigos:} 
+
+\end{itemize}
+
+\section{Conclusiones} \label{conclusiones}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
