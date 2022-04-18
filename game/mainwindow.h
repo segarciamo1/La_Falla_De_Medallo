@@ -19,6 +19,7 @@
 #include <QGraphicsLineItem>
 #include <QRect>
 #include <QKeyEvent>
+#include "ppal.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -38,7 +39,7 @@ public slots:
 private slots:
     void on_pushButton_2_clicked();
 
-    //void keyPressEvent(QKeyEvent *ev);
+    void keyPressEvent(QKeyEvent *ev);
     void on_pushButton_clicked();
 
     void on_pushButton_3_clicked();
@@ -54,6 +55,7 @@ private:
     QLabel *a,*w,*s,*d,*h,*nombre;
     QTextEdit *nombreEditable;
     QGraphicsLineItem *l1,*l2,*l3,*l4;
+    ppal *p1;
 
 
 

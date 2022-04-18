@@ -33,6 +33,8 @@ MainWindow::MainWindow(QWidget *parent)
     d->setGeometry(10,40,150,20);
     w->setGeometry(10,60,150,20);
     h->setGeometry(10,80,150,20);
+    p1= new ppal();
+    scene->addItem(p1);
 }
 
 MainWindow::~MainWindow()
@@ -52,33 +54,39 @@ void MainWindow::on_pushButton_2_clicked()
 
 }
 
-/*void MainWindow::keyPressEvent(QKeyEvent *ev)
+void MainWindow::keyPressEvent(QKeyEvent *ev)
 {
     switch (ev->key()) {
     case   Qt::Key_A :    {
+        p1->setPos(p1->pos().x()-5,p1->pos().y());
+        break;
 
     }
     case Qt::Key_W :
     {
-
+        p1->setPos(p1->pos().x(),p1->pos().y()-5);
+        break;
     }
     case Qt::Key_S:
     {
-
+        p1->setPos(p1->pos().x(),p1->pos().y()+5);
+        break;
     }
     case Qt::Key_D:
     {
-
+        p1->setPos(p1->pos().x()+5,p1->pos().y());
+        break;
     }
-    case Qt::Key_Space:
+    /*case Qt::Key_Space:
     {
 
     }
+    */
 
     }
 }
 
-*/
+
 void MainWindow::on_pushButton_clicked()
 {
     w2->show();
