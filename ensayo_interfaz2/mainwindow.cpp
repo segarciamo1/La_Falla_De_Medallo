@@ -1,18 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    scene=new QGraphicsScene(-500, -250, 1000, 500);;
+    scene=new QGraphicsScene(50, 0, 450, 450);;
     ui->graphicsView->setScene(scene);
-    l1 = new QGraphicsLineItem(-500,-250,500,-250);
-    l2 = new QGraphicsLineItem(-500,250,500,250);
-    l3 = new QGraphicsLineItem(-500,-250,-500,250);
-    l4 = new QGraphicsLineItem(500,-250,500,250);
-
+    //scene->addItem(ppal);
+    scene->addItem(p1);
 
     timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()), this, SLOT(Actualizar()));
@@ -56,10 +54,38 @@ void MainWindow::on_pushButton_2_clicked()
       w3->hide();
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *ev)
+{
+    switch (ev->key()) {
+    case   Qt::Key_A :    {
+        p1->setPos(p1->pos().x()-5,p1->pos().y());
+    }
+    case Qt::Key_W :
+    {
+        p1->setPos(p1->pos().x(),p1->pos().y());
+    }
+    case Qt::Key_S:
+    {
+        p1->setPos(p1->pos().x(),p1->pos().y()+5);
+    }
+    case Qt::Key_D:
+    {
+        p1->setPos(p1->pos().x()+5,p1->pos().y());
+    }
+    /*case Qt::Key_Space:
+    {
+
+    }
+
+   */
+    }
+}
+
 
 void MainWindow::on_pushButton_clicked()
 {
     w3->show();
     w2->hide();
 }
+
 
