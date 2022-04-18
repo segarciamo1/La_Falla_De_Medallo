@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    ppal.cpp
+    ppal.cpp \
+    proyectil.cpp
 
 HEADERS += \
     mainwindow.h \
-    ppal.h
+    ppal.h \
+    proyectil.h
 
 FORMS += \
     mainwindow.ui
