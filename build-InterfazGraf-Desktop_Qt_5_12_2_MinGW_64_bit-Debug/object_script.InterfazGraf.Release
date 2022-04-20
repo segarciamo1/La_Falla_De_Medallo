@@ -1,0 +1,14 @@
+release/ganaste.o
+release/iniciarseccion.o
+release/main.o
+release/mainwindow.o
+release/menuinicial.o
+release/perdiste.o
+release/registrarse.o
+release/qrc_Imagenes.o
+release/moc_ganaste.o
+release/moc_iniciarseccion.o
+release/moc_mainwindow.o
+release/moc_menuinicial.o
+release/moc_perdiste.o
+release/moc_registrarse.o

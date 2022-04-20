@@ -1,0 +1,14 @@
+debug/ganaste.o
+debug/iniciarseccion.o
+debug/main.o
+debug/mainwindow.o
+debug/menuinicial.o
+debug/perdiste.o
+debug/registrarse.o
+debug/qrc_Imagenes.o
+debug/moc_ganaste.o
+debug/moc_iniciarseccion.o
+debug/moc_mainwindow.o
+debug/moc_menuinicial.o
+debug/moc_perdiste.o
+debug/moc_registrarse.o
