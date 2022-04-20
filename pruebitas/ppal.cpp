@@ -64,18 +64,7 @@ void ppal::stop()
     timerY->stop();
 }
 
-void ppal::spawn()
-{
-    static int conta=0;
-    if(conta==50){
-        enemigo *ene= new enemigo();
-        scene()->addItem(ene);
-        conta=0;
-    }
-    conta++;
 
-
-}
 void ppal::movy()
 {
     setFocus();
@@ -90,6 +79,18 @@ void ppal::movy()
     }
 
     qDebug() << "la posicion es" << posy;
+
+
+}
+void ppal::spawn()
+{
+    static int conta=0;
+    if(conta==50){
+        enemigo *ene= new enemigo();
+        scene()->addItem(ene);
+        conta=0;
+    }
+    conta++;
 
 
 }
