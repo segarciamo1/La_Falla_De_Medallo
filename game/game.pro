@@ -11,10 +11,12 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    movimientos.cpp \
     ppal.cpp
 
 HEADERS += \
     mainwindow.h \
+    movimientos.h \
     ppal.h
 
 FORMS += \

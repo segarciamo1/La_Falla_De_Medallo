@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "QtDebug"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -12,7 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     //scene->addItem(ppal);
 
     timer = new QTimer(this);
-    connect(timer,SIGNAL(timeout()), this, SLOT(Actualizar()));
+    connect(timer,SIGNAL(timeout()), this, SLOT(actualizar()));
+    timer->start(100);
     w2=new QMainWindow(this);
     s2=new QGraphicsScene();
     v2=new QGraphicsView(s2);
@@ -35,6 +37,10 @@ MainWindow::MainWindow(QWidget *parent)
     h->setGeometry(10,80,150,20);
     p1= new ppal();
     scene->addItem(p1);
+    QImage fondo("../game/Terminadas/Fondo_Universidad.jpg");
+    QBrush b1(fondo);
+    ui->graphicsView->setBackgroundBrush(b1);
+    ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
 
 MainWindow::~MainWindow()
@@ -44,10 +50,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::actualizar()
 {
+    static int contador=0;
+    if(contador==10){
+        static int gravedad=2;
+        static int condicionsuelo=p1->pos().y()+gravedad>=265?p1->pos().y():p1->pos().y()+gravedad;
+        p1->setPos(p1->pos().x(),condicionsuelo);
+        contador=0;
+
+    }
 
 }
-
-
 
 void MainWindow::on_pushButton_2_clicked()
 {
@@ -63,18 +75,26 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
 
     }
     case Qt::Key_W :
+
     {
+        //actualizar();
         p1->setPos(p1->pos().x(),p1->pos().y()-5);
         break;
     }
     case Qt::Key_S:
     {
-        p1->setPos(p1->pos().x(),p1->pos().y()+5);
+
+        int condicionsuelo=p1->pos().y()+5>=265?p1->pos().y():p1->pos().y()+5;
+        p1->setPos(p1->pos().x(),condicionsuelo);
+        qDebug() << "la posicion es" << p1->pos().y();
         break;
     }
     case Qt::Key_D:
     {
         p1->setPos(p1->pos().x()+5,p1->pos().y());
+        scene->setSceneRect(p1->pos().x()+5, 0, 450, 450);
+        qDebug() << "la posicion x es" << p1->pos().x();
+
         break;
     }
     /*case Qt::Key_Space:

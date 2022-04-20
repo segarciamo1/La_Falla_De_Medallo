@@ -7,7 +7,7 @@ ppal::ppal()
 
 QRectF ppal::boundingRect() const
 {
-    return QRectF(40,40,25,25);
+    return QRectF(40,270,25,25);
 }
 
 void ppal::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -19,7 +19,31 @@ void ppal::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
     //painter->drawPixmap(boundingRect(),pixmap,pixmap.rect());
 }
 
-void ppal::mover()
+
+void ppal::aceleracion()
 {
-    setPos(x(),y());
+    ax += 0;
+    ay = GRAV;
 }
+
+void ppal::velocidades()
+// calcula las aceleraciones
+{
+    vx = vx + (ax*DT);
+    vy = vy + (ay*DT);
+}
+
+float ppal::posiciony(float tiempo)
+{
+     y = y + (vy * tiempo) + (0.5 * ay * pow(tiempo,2));
+     return y;
+}
+
+float ppal::posicionx()
+// calcula y Actualiza las posiciones
+{
+    x = x + (vx * DT) + (0.5 * ax * pow(DT,2));
+    return x;
+
+}
+
