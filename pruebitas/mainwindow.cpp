@@ -20,9 +20,9 @@ MainWindow::MainWindow(QWidget *parent)
     jugador= new ppal();
     jugador->setRect(100,300,25,25);
     scene->addItem(jugador);
+    jugador->start();
     QTimer *timer = new QTimer(this);
     //QObject::connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
-    connect(timer,SIGNAL(timeout()), jugador, SLOT(movy()));
     timer->start(100);
     show();
 }

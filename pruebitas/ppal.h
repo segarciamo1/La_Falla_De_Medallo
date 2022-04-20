@@ -16,15 +16,21 @@ public:
     void keyPressEvent(QKeyEvent *ev);
     void posicion();
     void posicion(int newX,int newY);
+    void start();
+    void stop();
+
 public slots:
     void spawn();
     void movy();
+
 private:
     float posx;
     float posy;
     float vy=0;
     float vx=8;
     bool salto;
+    QTimer * timerY;
+
 
 };
 

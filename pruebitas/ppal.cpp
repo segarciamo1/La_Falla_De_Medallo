@@ -12,54 +12,26 @@ ppal::ppal(QGraphicsItem *parent)
 
     salto=false;
     setFlag(QGraphicsItem::ItemIsFocusable);
+    timerY= new QTimer(this);
+    connect(timerY,SIGNAL(timeout()), this, SLOT(movy()));
 
 }
 
 void ppal::keyPressEvent(QKeyEvent *ev)
 {
-   /*switch (ev->key()) {
-    case   Qt::Key_A :    {
-        setPos(x()-5,y());
-        break;
 
-    }
-    case Qt::Key_W :
-
-    {
-        //actualizar();
-        setPos(x(),y()-5);
-        break;
-    }
-    case Qt::Key_S:
-    {
-
-        int condicionsuelo=pos().y()+5>=265?pos().y():pos().y()+5;
-        setPos(pos().x(),condicionsuelo);
-        qDebug() << "la posicion es" <<pos().y();
-        break;
-    }
-    case Qt::Key_D:
-    {
-       setPos(x()+5,y());
-
-       qDebug() << "la posicion x es" << pos().x();
-
-        break;
-    }
-
-}
-*/
    if(ev->key()==Qt::Key_A){
-       posx=posx-vx;
-       posicion();
+        //setPos(pos().x()-vx,pos().y());
+        posx=posx-vx;
 
    }
    else if(ev->key()==Qt::Key_D){
+       //setPos(pos().x()+vx,pos().y());
        posx=posx+vx;
-       posicion();
+
    }
    else if(ev->key()==Qt::Key_W){
-        vy=20;
+        vy=40;
         salto=true;
    }
    else if(ev->key()==Qt::Key_Space){
@@ -81,6 +53,17 @@ void ppal::posicion(int newX, int newY)
     setPos(newX,newY);
 }
 
+void ppal::start()
+{
+    timerY->start(20);
+}
+
+void ppal::stop()
+{
+    vy=0;
+    timerY->stop();
+}
+
 void ppal::spawn()
 {
     static int conta=0;
@@ -96,8 +79,17 @@ void ppal::spawn()
 void ppal::movy()
 {
     setFocus();
-    vy =vy+((-GRAV)*DT);
+    vy=vy+((-GRAV)*DT);
     posy +=-vy*DT+(0.5*DT*DT*GRAV);
-    posicion();
+    if(posy>=1){
+        posicion(posx,1);
+        posy=1;
+    }
+    else{
+        posicion();
+    }
+
+    qDebug() << "la posicion es" << posy;
+
 
 }
