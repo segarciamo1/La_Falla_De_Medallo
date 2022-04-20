@@ -6,7 +6,6 @@
 #include <QMessageBox>
 #include <QTextStream>
 
-
 namespace Ui {
 class Registrarse;
 }

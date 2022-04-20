@@ -11,7 +11,7 @@ CONFIG += c++11
 SOURCES += \
     about.cpp \
     ganaste.cpp \
-    iniciarseccion.cpp \
+    iniciarsesion.cpp \
     instrucciones.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -22,7 +22,7 @@ SOURCES += \
 HEADERS += \
     about.h \
     ganaste.h \
-    iniciarseccion.h \
+    iniciarsesion.h \
     instrucciones.h \
     mainwindow.h \
     menuinicial.h \
@@ -32,7 +32,7 @@ HEADERS += \
 FORMS += \
     about.ui \
     ganaste.ui \
-    iniciarseccion.ui \
+    iniciarsesion.ui \
     instrucciones.ui \
     mainwindow.ui \
     menuinicial.ui \

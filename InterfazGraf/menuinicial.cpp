@@ -6,7 +6,7 @@ Menuinicial::Menuinicial(QWidget *parent) :
     ui(new Ui::Menuinicial)
 {
     ui->setupUi(this);
-    iniciarseccion = new Iniciarseccion();
+    iniciarsesion = new Iniciarsesion();
     instrucciones = new Instrucciones();
 }
 
@@ -65,5 +65,5 @@ void Menuinicial::on_Posiciones_clicked()
 void Menuinicial::on_ComenzarJuegoButton_clicked()
 { // Botón para ocultar el UI de menu inicial y mostrar iniciar seccion.
     hide();
-    iniciarseccion->show();
+    iniciarsesion->show();
 }

@@ -1,7 +1,7 @@
 #include "registrarse.h"
 #include "ui_registrarse.h"
 
-#include "iniciarseccion.h"
+#include "iniciarsesion.h"
 
 Registrarse::Registrarse(QWidget *parent) :
     QWidget(parent),
@@ -14,6 +14,7 @@ Registrarse::~Registrarse()
 {
     delete ui;
 }
+
 
 void Registrarse::on_RegistrarseButton_clicked()
 {
@@ -61,11 +62,9 @@ void Registrarse::on_RegistrarseButton_clicked()
     archivo.close();
 }
 
-
 void Registrarse::on_VolverButtonReg_clicked()
 {
-    Iniciarseccion * iniciarseccion = new Iniciarseccion();
-    iniciarseccion->show();
+    Iniciarsesion * iniciarsesion = new Iniciarsesion();
+    iniciarsesion->show();
     hide();
 }
-

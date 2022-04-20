@@ -6,7 +6,7 @@
 #include <QFile>
 #include <QMessageBox>
 
-#include "iniciarseccion.h"
+#include "iniciarsesion.h"
 #include "instrucciones.h"
 #include "mainwindow.h"
 
@@ -33,7 +33,7 @@ private slots:
 private:
     Ui::Menuinicial *ui;
 
-    Iniciarseccion * iniciarseccion;
+    Iniciarsesion * iniciarsesion;
     Instrucciones * instrucciones;
 };
 

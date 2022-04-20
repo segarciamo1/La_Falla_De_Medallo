@@ -24,6 +24,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -60,13 +61,14 @@ border-image: url(:/fondos/Imagenes/Boton1.png);
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>240</y>
+     <y>230</y>
      <width>121</width>
      <height>61</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Times New Roman</family>
      <pointsize>15</pointsize>
      <bold>true</bold>
     </font>

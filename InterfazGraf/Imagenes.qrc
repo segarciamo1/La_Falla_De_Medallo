@@ -6,11 +6,11 @@
         <file>Imagenes/FELICIDADES!.png</file>
         <file>Imagenes/Boton1.png</file>
         <file>Imagenes/Fallaste.png</file>
-        <file>Imagenes/IniciarSeccion.png</file>
         <file>Imagenes/NuevoUsuario.png</file>
         <file>Imagenes/inicial.png</file>
         <file>Imagenes/Instrucciones.png</file>
         <file>Imagenes/About.png</file>
+        <file>Imagenes/IniciarSesion.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>Imagenes/Huevo.png</file>
