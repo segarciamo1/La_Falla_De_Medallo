@@ -21,7 +21,7 @@ class Ui_Menuinicial
 {
 public:
     QLabel *label;
-    QPushButton *IniciarSeccionButton;
+    QPushButton *ComenzarJuegoButton;
     QPushButton *Informacion;
     QPushButton *Posiciones;
 
@@ -36,19 +36,19 @@ public:
         label->setGeometry(QRect(0, 0, 480, 480));
         label->setPixmap(QPixmap(QString::fromUtf8(":/fondos/Imagenes/inicial.png")));
         label->setScaledContents(true);
-        IniciarSeccionButton = new QPushButton(Menuinicial);
-        IniciarSeccionButton->setObjectName(QString::fromUtf8("IniciarSeccionButton"));
-        IniciarSeccionButton->setGeometry(QRect(20, 310, 120, 48));
+        ComenzarJuegoButton = new QPushButton(Menuinicial);
+        ComenzarJuegoButton->setObjectName(QString::fromUtf8("ComenzarJuegoButton"));
+        ComenzarJuegoButton->setGeometry(QRect(20, 310, 120, 48));
         QFont font;
         font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
         font.setBold(true);
         font.setStrikeOut(false);
         font.setStyleStrategy(QFont::PreferDefault);
-        IniciarSeccionButton->setFont(font);
-        IniciarSeccionButton->setCursor(QCursor(Qt::ArrowCursor));
-        IniciarSeccionButton->setContextMenuPolicy(Qt::NoContextMenu);
-        IniciarSeccionButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+        ComenzarJuegoButton->setFont(font);
+        ComenzarJuegoButton->setCursor(QCursor(Qt::ArrowCursor));
+        ComenzarJuegoButton->setContextMenuPolicy(Qt::NoContextMenu);
+        ComenzarJuegoButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "color:black;\n"
 "border-image: url(:/fondos/Imagenes/Boton1.png);\n"
@@ -70,10 +70,7 @@ public:
         Posiciones = new QPushButton(Menuinicial);
         Posiciones->setObjectName(QString::fromUtf8("Posiciones"));
         Posiciones->setGeometry(QRect(330, 310, 120, 48));
-        QFont font2;
-        font2.setPointSize(12);
-        font2.setBold(true);
-        Posiciones->setFont(font2);
+        Posiciones->setFont(font1);
         Posiciones->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "color:black;\n"
@@ -90,7 +87,7 @@ public:
     {
         Menuinicial->setWindowTitle(QApplication::translate("Menuinicial", "Form", nullptr));
         label->setText(QString());
-        IniciarSeccionButton->setText(QApplication::translate("Menuinicial", "Iniciar Secci\303\263n", nullptr));
+        ComenzarJuegoButton->setText(QApplication::translate("Menuinicial", "Comenzar Juego", nullptr));
         Informacion->setText(QApplication::translate("Menuinicial", "Informaci\303\263n", nullptr));
         Posiciones->setText(QApplication::translate("Menuinicial", "Posiciones", nullptr));
     } // retranslateUi

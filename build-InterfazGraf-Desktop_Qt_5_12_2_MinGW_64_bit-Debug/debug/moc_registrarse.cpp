@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Registrarse_t {
     QByteArrayData data[4];
-    char stringdata0[66];
+    char stringdata0[69];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,11 +34,11 @@ static const qt_meta_stringdata_Registrarse_t qt_meta_stringdata_Registrarse = {
 QT_MOC_LITERAL(0, 0, 11), // "Registrarse"
 QT_MOC_LITERAL(1, 12, 28), // "on_RegistrarseButton_clicked"
 QT_MOC_LITERAL(2, 41, 0), // ""
-QT_MOC_LITERAL(3, 42, 23) // "on_VolverButton_clicked"
+QT_MOC_LITERAL(3, 42, 26) // "on_VolverButtonReg_clicked"
 
     },
     "Registrarse\0on_RegistrarseButton_clicked\0"
-    "\0on_VolverButton_clicked"
+    "\0on_VolverButtonReg_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -73,7 +73,7 @@ void Registrarse::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_RegistrarseButton_clicked(); break;
-        case 1: _t->on_VolverButton_clicked(); break;
+        case 1: _t->on_VolverButtonReg_clicked(); break;
         default: ;
         }
     }

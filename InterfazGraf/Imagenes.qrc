@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/fondos">
+        <file>Imagenes/Fondo_Campo.jpg</file>
+        <file>Imagenes/Fondo_Ciudad.jpg</file>
+        <file>Imagenes/Fondo_Universidad.jpg</file>
+        <file>Imagenes/FELICIDADES!.png</file>
+        <file>Imagenes/Boton1.png</file>
+        <file>Imagenes/Fallaste.png</file>
+        <file>Imagenes/IniciarSeccion.png</file>
+        <file>Imagenes/NuevoUsuario.png</file>
+        <file>Imagenes/inicial.png</file>
+        <file>Imagenes/Instrucciones.png</file>
+        <file>Imagenes/About.png</file>
+    </qresource>
+    <qresource prefix="/items">
+        <file>Imagenes/Huevo.png</file>
+        <file>Imagenes/Mochila.png</file>
+        <file>Imagenes/Pizza.png</file>
+        <file>Imagenes/VidaExtra.png</file>
+        <file>Imagenes/Water.png</file>
+        <file>Imagenes/Carro.png</file>
+        <file>Imagenes/Libro.png</file>
+        <file>Imagenes/ValaLadron.png</file>
+    </qresource>
+    <qresource prefix="/personajes">
+        <file>Imagenes/Aves.png</file>
+        <file>Imagenes/Capucho.png</file>
+        <file>Imagenes/Ladron.png</file>
+        <file>Imagenes/PersonajePrincipal.png</file>
+        <file>Imagenes/Vaca.png</file>
+    </qresource>
+</RCC>

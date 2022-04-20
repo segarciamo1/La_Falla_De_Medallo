@@ -73,6 +73,38 @@ public:
 
         lineEdit_Usuario = new QLineEdit(layoutWidget);
         lineEdit_Usuario->setObjectName(QString::fromUtf8("lineEdit_Usuario"));
+        QPalette palette;
+        QBrush brush(QColor(0, 0, 0, 255));
+        brush.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        QBrush brush1(QColor(255, 255, 255, 255));
+        brush1.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Active, QPalette::Text, brush1);
+        palette.setBrush(QPalette::Active, QPalette::ButtonText, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Active, QPalette::PlaceholderText, brush1);
+#endif
+        QBrush brush2(QColor(208, 208, 208, 255));
+        brush2.setStyle(Qt::SolidPattern);
+        palette.setBrush(QPalette::Inactive, QPalette::WindowText, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::Text, brush2);
+        palette.setBrush(QPalette::Inactive, QPalette::ButtonText, brush2);
+        QBrush brush3(QColor(127, 127, 128, 255));
+        brush3.setStyle(Qt::SolidPattern);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush3);
+#endif
+        palette.setBrush(QPalette::Disabled, QPalette::WindowText, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::Text, brush1);
+        palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush1);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
+        palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush3);
+#endif
+        lineEdit_Usuario->setPalette(palette);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Segoe UI Black"));
+        lineEdit_Usuario->setFont(font2);
+        lineEdit_Usuario->setFrame(false);
 
         horizontalLayout->addWidget(lineEdit_Usuario);
 
@@ -99,13 +131,12 @@ public:
         IniciarSeccionButton = new QPushButton(Iniciarseccion);
         IniciarSeccionButton->setObjectName(QString::fromUtf8("IniciarSeccionButton"));
         IniciarSeccionButton->setGeometry(QRect(40, 370, 120, 48));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Times New Roman"));
-        font2.setPointSize(12);
-        font2.setBold(true);
-        font2.setStrikeOut(false);
-        font2.setStyleStrategy(QFont::PreferDefault);
-        IniciarSeccionButton->setFont(font2);
+        QFont font3;
+        font3.setPointSize(12);
+        font3.setBold(true);
+        font3.setStrikeOut(false);
+        font3.setStyleStrategy(QFont::PreferDefault);
+        IniciarSeccionButton->setFont(font3);
         IniciarSeccionButton->setCursor(QCursor(Qt::ArrowCursor));
         IniciarSeccionButton->setContextMenuPolicy(Qt::NoContextMenu);
         IniciarSeccionButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -116,11 +147,10 @@ public:
         VolverButton = new QPushButton(Iniciarseccion);
         VolverButton->setObjectName(QString::fromUtf8("VolverButton"));
         VolverButton->setGeometry(QRect(330, 370, 120, 48));
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("Times New Roman"));
-        font3.setPointSize(12);
-        font3.setBold(true);
-        VolverButton->setFont(font3);
+        QFont font4;
+        font4.setPointSize(12);
+        font4.setBold(true);
+        VolverButton->setFont(font4);
         VolverButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "color:black;\n"
@@ -134,7 +164,7 @@ public:
         RegistraseButton = new QPushButton(Iniciarseccion);
         RegistraseButton->setObjectName(QString::fromUtf8("RegistraseButton"));
         RegistraseButton->setGeometry(QRect(190, 370, 120, 48));
-        RegistraseButton->setFont(font2);
+        RegistraseButton->setFont(font3);
         RegistraseButton->setCursor(QCursor(Qt::ArrowCursor));
         RegistraseButton->setContextMenuPolicy(Qt::NoContextMenu);
         RegistraseButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -157,6 +187,7 @@ public:
     {
         Iniciarseccion->setWindowTitle(QApplication::translate("Iniciarseccion", "Form", nullptr));
         label->setText(QApplication::translate("Iniciarseccion", "Usuario", nullptr));
+        lineEdit_Usuario->setPlaceholderText(QString());
         label_2->setText(QApplication::translate("Iniciarseccion", "Contrase\303\261a", nullptr));
         IniciarSeccionButton->setText(QApplication::translate("Iniciarseccion", "Iniciar Secci\303\263n", nullptr));
         VolverButton->setText(QApplication::translate("Iniciarseccion", "Volver", nullptr));

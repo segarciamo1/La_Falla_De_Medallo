@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Menuinicial_t {
     QByteArrayData data[5];
-    char stringdata0[90];
+    char stringdata0[89];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,14 +32,15 @@ struct qt_meta_stringdata_Menuinicial_t {
 static const qt_meta_stringdata_Menuinicial_t qt_meta_stringdata_Menuinicial = {
     {
 QT_MOC_LITERAL(0, 0, 11), // "Menuinicial"
-QT_MOC_LITERAL(1, 12, 31), // "on_IniciarSeccionButton_clicked"
-QT_MOC_LITERAL(2, 44, 0), // ""
-QT_MOC_LITERAL(3, 45, 22), // "on_Informacion_clicked"
-QT_MOC_LITERAL(4, 68, 21) // "on_Posiciones_clicked"
+QT_MOC_LITERAL(1, 12, 22), // "on_Informacion_clicked"
+QT_MOC_LITERAL(2, 35, 0), // ""
+QT_MOC_LITERAL(3, 36, 21), // "on_Posiciones_clicked"
+QT_MOC_LITERAL(4, 58, 30) // "on_ComenzarJuegoButton_clicked"
 
     },
-    "Menuinicial\0on_IniciarSeccionButton_clicked\0"
-    "\0on_Informacion_clicked\0on_Posiciones_clicked"
+    "Menuinicial\0on_Informacion_clicked\0\0"
+    "on_Posiciones_clicked\0"
+    "on_ComenzarJuegoButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,9 +76,9 @@ void Menuinicial::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<Menuinicial *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_IniciarSeccionButton_clicked(); break;
-        case 1: _t->on_Informacion_clicked(); break;
-        case 2: _t->on_Posiciones_clicked(); break;
+        case 0: _t->on_Informacion_clicked(); break;
+        case 1: _t->on_Posiciones_clicked(); break;
+        case 2: _t->on_ComenzarJuegoButton_clicked(); break;
         default: ;
         }
     }

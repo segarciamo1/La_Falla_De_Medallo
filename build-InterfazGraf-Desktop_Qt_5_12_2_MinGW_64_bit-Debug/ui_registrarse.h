@@ -34,7 +34,7 @@ public:
     QLineEdit *lineEdit_Contrasea;
     QLabel *NuevoUserFondo;
     QPushButton *RegistrarseButton;
-    QPushButton *VolverButton;
+    QPushButton *VolverButtonReg;
 
     void setupUi(QWidget *Registrarse)
     {
@@ -57,7 +57,7 @@ public:
 "color: rgb(255, 255, 255);"));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(20, 30, 351, 26));
+        layoutWidget->setGeometry(QRect(20, 30, 351, 30));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -104,7 +104,6 @@ public:
         RegistrarseButton->setObjectName(QString::fromUtf8("RegistrarseButton"));
         RegistrarseButton->setGeometry(QRect(70, 350, 120, 48));
         QFont font2;
-        font2.setFamily(QString::fromUtf8("Times New Roman"));
         font2.setPointSize(12);
         font2.setBold(true);
         font2.setStrikeOut(false);
@@ -117,15 +116,14 @@ public:
 "color:black;\n"
 "border-image: url(:/fondos/Imagenes/Boton1.png);\n"
 "}"));
-        VolverButton = new QPushButton(Registrarse);
-        VolverButton->setObjectName(QString::fromUtf8("VolverButton"));
-        VolverButton->setGeometry(QRect(270, 350, 120, 48));
+        VolverButtonReg = new QPushButton(Registrarse);
+        VolverButtonReg->setObjectName(QString::fromUtf8("VolverButtonReg"));
+        VolverButtonReg->setGeometry(QRect(270, 350, 120, 48));
         QFont font3;
-        font3.setFamily(QString::fromUtf8("Times New Roman"));
         font3.setPointSize(12);
         font3.setBold(true);
-        VolverButton->setFont(font3);
-        VolverButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+        VolverButtonReg->setFont(font3);
+        VolverButtonReg->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "color:black;\n"
 "border-image: url(:/fondos/Imagenes/Boton1.png);\n"
@@ -134,7 +132,7 @@ public:
         NuevoUserFondo->raise();
         groupBox->raise();
         RegistrarseButton->raise();
-        VolverButton->raise();
+        VolverButtonReg->raise();
 
         retranslateUi(Registrarse);
 
@@ -148,7 +146,7 @@ public:
         label_2->setText(QApplication::translate("Registrarse", "Contrase\303\261a", nullptr));
         NuevoUserFondo->setText(QString());
         RegistrarseButton->setText(QApplication::translate("Registrarse", "Registrarse", nullptr));
-        VolverButton->setText(QApplication::translate("Registrarse", "Volver", nullptr));
+        VolverButtonReg->setText(QApplication::translate("Registrarse", "Volver", nullptr));
     } // retranslateUi
 
 };

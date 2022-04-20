@@ -1,13 +1,17 @@
+release/about.o
 release/ganaste.o
 release/iniciarseccion.o
+release/instrucciones.o
 release/main.o
 release/mainwindow.o
 release/menuinicial.o
 release/perdiste.o
 release/registrarse.o
 release/qrc_Imagenes.o
+release/moc_about.o
 release/moc_ganaste.o
 release/moc_iniciarseccion.o
+release/moc_instrucciones.o
 release/moc_mainwindow.o
 release/moc_menuinicial.o
 release/moc_perdiste.o

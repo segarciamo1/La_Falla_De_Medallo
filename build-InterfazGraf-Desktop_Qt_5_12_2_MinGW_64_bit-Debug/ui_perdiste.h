@@ -37,6 +37,7 @@ public:
         VolverJugar->setObjectName(QString::fromUtf8("VolverJugar"));
         VolverJugar->setGeometry(QRect(80, 350, 120, 48));
         QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
         font.setBold(true);
         font.setStrikeOut(false);
@@ -53,6 +54,7 @@ public:
         Salir->setObjectName(QString::fromUtf8("Salir"));
         Salir->setGeometry(QRect(280, 350, 120, 48));
         QFont font1;
+        font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(12);
         font1.setBold(true);
         Salir->setFont(font1);

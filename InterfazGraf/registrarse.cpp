@@ -62,7 +62,7 @@ void Registrarse::on_RegistrarseButton_clicked()
 }
 
 
-void Registrarse::on_VolverButton_clicked()
+void Registrarse::on_VolverButtonReg_clicked()
 {
     Iniciarseccion * iniciarseccion = new Iniciarseccion();
     iniciarseccion->show();
