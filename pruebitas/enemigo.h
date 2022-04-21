@@ -21,7 +21,7 @@ private:
     float ix;
     float fy;
     float fx;
-    float rad=25;
+    float rad=1;
     float angulo;
     const float w=0.1;
 };

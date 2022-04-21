@@ -78,17 +78,17 @@ void ppal::movy()
         posicion();
     }
 
-    qDebug() << "la posicion es" << posy;
+    //qDebug() << "la posicion es" << posy;
 
 
 }
 void ppal::spawn()
 {
     static int conta=0;
-    if(conta==50){
+    if(conta==0){
         enemigo *ene= new enemigo();
         scene()->addItem(ene);
-        conta=0;
+
     }
     conta++;
 

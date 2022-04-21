@@ -7,8 +7,9 @@
 enemigo::enemigo(QGraphicsItem *parent)
 {
 
-    setPos(300,400);
-    setRect(0,0,50,50);
+
+    setRect(400,0,50,50);
+    posicion(400,300);
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
 

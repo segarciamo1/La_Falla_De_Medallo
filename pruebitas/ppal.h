@@ -5,7 +5,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsScene>
 #include <QTimer>
-#define GRAV 5
+#define GRAV 8
 #define DT 0.1
 
 class ppal : public QObject,public QGraphicsRectItem
