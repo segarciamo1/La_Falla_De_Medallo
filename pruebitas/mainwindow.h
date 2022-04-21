@@ -7,7 +7,7 @@
 
 #include<ppal.h>
 #include<enemigo.h>
-#include <pajaro.h>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,9 +24,9 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
-    pajaro *ave;
+
     ppal *jugador;
-    QList <pajaro *> pajaros ;
+
 
 
 };

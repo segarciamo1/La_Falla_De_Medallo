@@ -3,6 +3,7 @@
 #include <QTimer>
 #include <stdlib.h>
 #include <ppal.h>
+#include <math.h>
 
 enemigo::enemigo(QGraphicsItem *parent)
 {

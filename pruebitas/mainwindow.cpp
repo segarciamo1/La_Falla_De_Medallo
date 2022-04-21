@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include "ppal.h"
 #include "enemigo.h"
-#include "pajaro.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
