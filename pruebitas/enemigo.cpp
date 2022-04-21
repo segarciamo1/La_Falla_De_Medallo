@@ -6,8 +6,8 @@
 
 enemigo::enemigo(QGraphicsItem *parent)
 {
-    int random_number= rand()%500;
-    setPos(random_number,300);
+
+    setPos(300,400);
     setRect(0,0,50,50);
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
@@ -28,6 +28,10 @@ void enemigo::posicion(int newX, int newY)
 
 void enemigo::move()
 {
-    setPos(x()-5,y());
+    angulo=angulo+w*DT;
+    posx=posx+rad*cos(angulo);
+    posy=posy+rad*sin(angulo);
+    qDebug()<<"x: "<<posx<<", y: "<<posy;
+    posicion();
 }
 

@@ -9,7 +9,7 @@ class enemigo:public QObject,public QGraphicsRectItem
 Q_OBJECT
 public:
     enemigo(QGraphicsItem *parent=0);
-    enemigo(float x,float y,float xf, float yf); //Este es el constructor para las plataformas de mov simple
+    enemigo(float x,float y,float xf, float yf);
     void posicion();
     void posicion(int newX,int newY);
 public slots:
@@ -21,8 +21,9 @@ private:
     float ix;
     float fy;
     float fx;
-    bool dir=0;
-    int vidas=2;
+    float rad=25;
+    float angulo;
+    const float w=0.1;
 };
 
 #endif // ENEMIGO_H

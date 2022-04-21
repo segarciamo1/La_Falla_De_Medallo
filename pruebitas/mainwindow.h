@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QGraphicsScene>
+#include <QList>
 
 #include<ppal.h>
 #include<enemigo.h>
@@ -25,6 +26,8 @@ private:
     QGraphicsScene* scene;
     pajaro *ave;
     ppal *jugador;
+    QList <pajaro *> pajaros ;
+
 
 };
 #endif // MAINWINDOW_H

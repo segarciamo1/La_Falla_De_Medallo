@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "ppal.h"
 #include "enemigo.h"
+#include "pajaro.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,7 +25,11 @@ MainWindow::MainWindow(QWidget *parent)
     QTimer *timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
     timer->start(100);
+   // pajaros.append(new pajaro(250,400,50));
+    //scene->addItem(pajaros.last());
    // ave= new pajaro(100,300,100);
+    //scene->addItem(ave);
+   // ave = new pajaro(250,400,50);
     //scene->addItem(ave);
     show();
 }

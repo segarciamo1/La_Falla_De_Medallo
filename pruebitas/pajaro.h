@@ -10,7 +10,7 @@
 #include <QList>
 #include <QMainWindow>
 #include <math.h>
-class pajaro:public QObject,public QGraphicsPixmapItem{
+class pajaro:public QObject,public QGraphicsRectItem{
 
 Q_OBJECT
 public:
