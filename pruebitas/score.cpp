@@ -1,19 +1,25 @@
-#include "score.h"
+#include <score.h>
+#include <QFont>
 
-score::score(QGraphicsItem *parent)
+Score::Score(QGraphicsItem *parent)
 {
-    puntaje=0;
-    setPlainText(QString("score")+QString::number(puntaje));
-    setDefaultTextColor(Qt::darkBlue);
-    //setFont(QFont())
+    // inciar el puntaje
+    score = 0;
+
+    // dibujar el texto
+
+    setPlainText(QString("Score: ")+QString::number(score));
+    setDefaultTextColor(Qt::blue);
+    setFont(QFont("times",16));
 }
 
-void score::incrementar()
+void Score::increase()
 {
-
+    score+=10;
+    setPlainText(QString("Score:  ")+QString::number(score));
 }
 
-void score::getPuntaje()
+int Score::getScore()
 {
-
+    return score;
 }

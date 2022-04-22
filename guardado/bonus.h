@@ -5,6 +5,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsPixmapItem>
 #include <QTimer>
+#include <score.h>
 
 class bonus:public QObject,public QGraphicsPixmapItem
 {
@@ -26,7 +27,8 @@ public slots:
     void move();
 
 private:
-     QTimer *timer1=new QTimer();
+    QTimer *timer1=new QTimer();
+    score *puntaje= new score();
     float posx;
     float posy;
     int puntuacion;

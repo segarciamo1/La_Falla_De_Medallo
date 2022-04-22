@@ -72,7 +72,7 @@ private:
 
     const int tamanoX=25;
     const int tamanoY=25;
-    int vidas=100;
+    int vidas=50;
     int puntuacion=0;
     Perdiste * perdiste = new Perdiste();
 

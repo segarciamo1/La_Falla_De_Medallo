@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     jugador= new ppal();
     scene->addItem(jugador);
     jugador->start();
+    puntaje= new score();
+    scene->addItem(puntaje);
     QTimer *timer = new QTimer(this);
 
 //    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
@@ -111,7 +113,7 @@ void MainWindow::suma()
     static int conta=0;
     if(conta==10){
         puntuacion=bonu->getPuntuacion()+ene->getPuntuacion()+capu->getPuntuacion();
-//        qDebug() << "sumonobnu"<<puntuacion;
+        qDebug() << "sumonobnu"<<puntuacion;
         conta=0;
     }
     conta++;
