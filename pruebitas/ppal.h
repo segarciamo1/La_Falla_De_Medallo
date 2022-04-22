@@ -5,15 +5,15 @@
 #include <QGraphicsItem>
 #include <QGraphicsScene>
 #include <QTimer>
+#include <QGraphicsPixmapItem>
 #define GRAV 8
 #define DT 0.1
 
-class ppal : public QObject,public QGraphicsRectItem
+class ppal : public QObject,public QGraphicsPixmapItem
 {
 Q_OBJECT
 public:
     ppal(QGraphicsItem *parent=0);
-    void keyPressEvent(QKeyEvent *ev);
     void posicion();
     void posicion(int newX,int newY);
     void start();
@@ -38,6 +38,9 @@ public:
     bool getSalto() const;
     void setSalto(bool newSalto);
 
+    float getVx() const;
+    void setVx(float newVx);
+
 public slots:
     void spawn();
     void movy();
@@ -48,7 +51,7 @@ private:
     float vy=0;
     float vx=8;
     bool salto;
-    bool sobre;
+    bool sobre=true;
     QTimer * timerY;
     const int tamanoX=25;
     const int tamanoY=25;

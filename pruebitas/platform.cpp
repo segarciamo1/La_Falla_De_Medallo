@@ -49,7 +49,7 @@ void platform::mov()
 {
     //debe detectar colisiones con el personaje ppal
     QList<QGraphicsItem *> list = collidingItems();
-    foreach(QGraphicsItem * i , list) //es probable que tenga que mover esto a la parte de las plataformas, para que el mov de tico varie por plataforma
+    foreach(QGraphicsItem * i , list)
     {
         ppal * item= dynamic_cast<ppal *>(i); //Con esto se hace la colision con cada plataforma
         if (item)
@@ -57,18 +57,20 @@ void platform::mov()
             if (item->getPosy()<posy+sizey/2){
                 item->setSobre(true);
                 if (!item->getSalto()){
-                item->setPosy(posy);
+                item->setPosy(100);
                 item->setVy(0);
-                qDebug() << "choco plataforma";
-
-
+                qDebug() << "pego plataforma";
                 }
             }
-            if (item->getPosy()>posy+sizey-5){
+           /* if (item->getPosy()>posy+sizey-5){
                 item->setPosy(posy+sizey);
                 item->setVy(0);
+                qDebug() << "este interactua";
+
             }
+            */
         }
+
     }
 
 

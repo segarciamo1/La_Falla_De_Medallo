@@ -7,11 +7,12 @@
 
 proyectil::proyectil()
 {
-    setRect(100,300,10,10);
+    setPixmap(QPixmap(":/Items/Terminadas/Libro.png"));
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
 }
+
 
 void proyectil::move()
 {
@@ -24,7 +25,7 @@ void proyectil::move()
         }
     }
     setPos(x()+10,y());
-    if(pos().x()+rect().height()>450){
+    if(pos().x()>450){
         scene()->removeItem(this);
         delete this;
 

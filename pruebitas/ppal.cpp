@@ -4,12 +4,14 @@
 #include <proyectil.h>
 #include "enemigo.h"
 #include "platform.h"
+#include "mainwindow.h"
 
-
-ppal::ppal(QGraphicsItem *parent)
-
+ppal::ppal(QGraphicsItem *parent):
+    QGraphicsPixmapItem(parent)
 {
 
+    posx=100;
+    setPixmap(QPixmap(":/Personajes/Terminadas/PersonajePrincipal.png"));
     salto=false;
     setFlag(QGraphicsItem::ItemIsFocusable);
     timerY= new QTimer(this);
@@ -17,32 +19,7 @@ ppal::ppal(QGraphicsItem *parent)
 
 }
 
-void ppal::keyPressEvent(QKeyEvent *ev)
-{
-   salto=false;
-   if(ev->key()==Qt::Key_A){
-        //setPos(pos().x()-vx,pos().y());
 
-        posx=posx-vx;
-
-   }
-   else if(ev->key()==Qt::Key_D){
-       //setPos(pos().x()+vx,pos().y());
-
-       posx=posx+vx;
-   }
-   else if(ev->key()==Qt::Key_W){
-        vy=40;
-        salto=true;
-   }
-   else if(ev->key()==Qt::Key_Space){
-       proyectil * disparo= new proyectil();
-       disparo->setPos(this->x(),this->y());
-       scene()->addItem(disparo);
-   }
-
-
-}
 
 void ppal::posicion()
 {
@@ -71,25 +48,14 @@ void ppal::movy()
     setFocus();
     vy=vy+((-GRAV)*DT);
     posy +=-vy*DT+(0.5*DT*DT*GRAV);
-    if(posy>=1){
+    if(posy>=290){
 
-        QList <QGraphicsItem *> list= collidingItems();
 
-        if (list.size()==0){
-            salto=false;
-            sobre=false;
-        }
-        posicion(posx,1);
-        posy=1;
+        posicion(posx,290);
+        posy=290;
 
     }
     else{
-        QList <QGraphicsItem *> list= collidingItems();
-
-        if (list.size()==0){
-            salto=false;
-            sobre=false;
-        }
         posicion();
     }
 
@@ -97,6 +63,16 @@ void ppal::movy()
     //qDebug() << "la posicion es" << posy;
 
 
+}
+
+float ppal::getVx() const
+{
+    return vx;
+}
+
+void ppal::setVx(float newVx)
+{
+    vx = newVx;
 }
 
 bool ppal::getSalto() const

@@ -4,8 +4,9 @@
 #include <QObject>
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 
-class proyectil : public QObject,public QGraphicsRectItem{
+class proyectil : public QObject,public QGraphicsPixmapItem{
   Q_OBJECT
 
 public:

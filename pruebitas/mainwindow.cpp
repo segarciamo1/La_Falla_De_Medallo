@@ -2,6 +2,8 @@
 #include "ui_mainwindow.h"
 #include "ppal.h"
 #include "enemigo.h"
+#include <QKeyEvent>
+#include <proyectil.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
     QBrush b1(fondo);
     ui->graphicsView->setBackgroundBrush(b1);
     jugador= new ppal();
-    jugador->setRect(100,300,25,25);
     scene->addItem(jugador);
     jugador->start();
     QTimer *timer = new QTimer(this);
@@ -38,5 +39,37 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *ev)
+{
+    jugador->setSalto(false);
+    if(ev->key()==Qt::Key_A){
+         //setPos(pos().x()-vx,pos().y());
+         jugador->setPosx(jugador->getPosx()-jugador->getVx());
+         scene->setSceneRect(jugador->getPosx(),0,500,455);
+
+
+
+    }
+    else if(ev->key()==Qt::Key_D){
+        //setPos(pos().x()+vx,pos().y());
+        jugador->setPosx(jugador->getPosx()+jugador->getVx());
+        scene->setSceneRect(jugador->getPosx(),0,500,455);
+
+
+    }
+    else if(ev->key()==Qt::Key_W){
+         jugador->setVy(40);
+         jugador->setSalto(true);
+    }
+    else if(ev->key()==Qt::Key_Space){
+        proyectil * disparo= new proyectil();
+        disparo->setPos(jugador->getPosx(),jugador->getPosy());
+        scene->addItem(disparo);
+    }
+
+
+
 }
 
