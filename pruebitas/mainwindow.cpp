@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     scene->addItem(plataforma);
     bonu=new bonus(100,200);
     scene->addItem(bonu);
-    qDebug() << "paso por bonu";
+    //qDebug() << "paso por bonu";
    // pajaros.append(new pajaro(250,400,50));
     //scene->addItem(pajaros.last());
    // ave= new pajaro(100,300,100);

@@ -6,7 +6,7 @@ bonus::bonus(float x,float y)
 {
     posx=x;
     posy=y;
-    setPixmap(QPixmap(":/Personajes/Terminadas/Pizza.png"));
+    setPixmap(QPixmap(":/Items/Terminadas/Pizza.png"));
     posicion();
     QTimer *timer1= new QTimer;
     connect(timer1,SIGNAL(timeout()), this, SLOT(move()));
@@ -49,7 +49,6 @@ void bonus::move()
     QList <QGraphicsItem *> colliding_items= collidingItems();
     for(int i=0,n=collidingItems().size();i<n;++i){
         if(typeid (*(colliding_items[i]))==typeid (ppal)){
-            delete colliding_items[i];
             delete this;
             return;
         }
