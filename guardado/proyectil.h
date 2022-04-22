@@ -27,7 +27,7 @@ public slots:
 private:
     bool sumaMuertos=false;
     int puntuacion=0;
-    int limite=800;
+    int limite=850;
     short int FotogramaDis = 1;
     float posicionjug;
 };

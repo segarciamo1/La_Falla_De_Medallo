@@ -9,7 +9,8 @@ class capucho:public QObject,public QGraphicsPixmapItem
 {
 Q_OBJECT
 public:
-    capucho();
+    capucho(float posi);
+    capucho(float x,float y);
     void posicion();
     void posicion(int newX,int newY);
     int getPuntuacion() const;
@@ -22,6 +23,7 @@ private:
     float posx;
     float posy;
     int puntuacion=0;
+    int movimiento=1;
 };
 
 #endif // CAPUCHO_H

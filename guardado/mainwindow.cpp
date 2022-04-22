@@ -46,9 +46,14 @@ MainWindow::MainWindow(QWidget *parent)
         scene->addItem(enemys.last());
 
     }
-    capu= new capucho();
-    scene->addItem(capu);
+    //capu= new capucho();
+    //scene->addItem(capu);
+    for (int indx=1;indx<4 ;indx++ ) {
+        capuchos.append(new capucho(600*indx));
+        qDebug() << "se crea los capuchos"<<indx;
+        scene->addItem(capuchos.last());
 
+    }
     //bonu=new bonus(100,200);
     //scene->addItem(bonu);
     for (int indx=1;indx<=10 ;indx++ ) {

@@ -4,7 +4,6 @@
 #include <proyectil.h>
 #include "enemigo.h"
 #include "platform.h"
-#include "mainwindow.h"
 #include "capucho.h"
 #include "bonus.h"
 
@@ -17,8 +16,10 @@ ppal::ppal(QGraphicsItem *parent):
     salto=false;
     setFlag(QGraphicsItem::ItemIsFocusable);
     timerY= new QTimer(this);
+    timerVidas = new QTimer(this);
     connect(timerY,SIGNAL(timeout()), this, SLOT(movy()));
     connect(timerY,SIGNAL(timeout()), this, SLOT(damage()));
+    timerVidas->start(1500);
 }
 
 void ppal::posicion()
@@ -134,8 +135,14 @@ void ppal::damage()
 {
     QList <QGraphicsItem *> colliding_items= collidingItems();
     for(int i=0,n=collidingItems().size();i<n;++i){
-        if(typeid (*(colliding_items[i]))!=typeid (platform) and typeid (*(colliding_items[i]))!=typeid (proyectil)){
+        if(typeid (*(colliding_items[i]))!=typeid (platform) and typeid (*(colliding_items[i]))!=typeid (proyectil) and typeid (*(colliding_items[i]))!=typeid (bonus)){
             vidas-=1;
+            qDebug() << "las vidas son" << vidas;
+            if(vidas==0){
+                perdiste->show();
+
+                break;
+            }
 //            qDebug() << "las vidas son" << vidas;
         }
     }

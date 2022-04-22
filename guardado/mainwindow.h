@@ -44,7 +44,7 @@ private:
     enemigo * ene;
     QList <QGraphicsPixmapItem*> enemys;
     QList <QGraphicsPixmapItem*> bonuss;
-
+    QList <QGraphicsPixmapItem*> capuchos;
     QList <QGraphicsRectItem*> plataformas;
     int puntuacion=0;
 };
