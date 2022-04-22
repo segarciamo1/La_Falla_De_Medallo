@@ -4,6 +4,7 @@
 #include "enemigo.h"
 #include <QKeyEvent>
 #include <proyectil.h>
+#include <bonus.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,6 +28,9 @@ MainWindow::MainWindow(QWidget *parent)
     timer->start(100);
     plataforma= new platform(200,100);
     scene->addItem(plataforma);
+    bonu=new bonus(100,200);
+    scene->addItem(bonu);
+    qDebug() << "paso por bonu";
    // pajaros.append(new pajaro(250,400,50));
     //scene->addItem(pajaros.last());
    // ave= new pajaro(100,300,100);

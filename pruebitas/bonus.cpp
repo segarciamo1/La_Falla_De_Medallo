@@ -1,0 +1,57 @@
+#include "bonus.h"
+#include "ppal.h"
+
+bonus::bonus(float x,float y)
+
+{
+    posx=x;
+    posy=y;
+    setPixmap(QPixmap(":/Personajes/Terminadas/Pizza.png"));
+    posicion();
+    QTimer *timer1= new QTimer;
+    connect(timer1,SIGNAL(timeout()), this, SLOT(move()));
+    timer1->start(50);
+
+}
+
+void bonus::posicion()
+{
+    setPos(posx,posy);
+}
+
+void bonus::posicion(int newX, int newY)
+{
+    setPos(newX,newY);
+}
+
+float bonus::getPosx() const
+{
+    return posx;
+}
+
+void bonus::setPosx(float newPosx)
+{
+    posx = newPosx;
+}
+
+float bonus::getPosy() const
+{
+    return posy;
+}
+
+void bonus::setPosy(float newPosy)
+{
+    posy = newPosy;
+}
+
+void bonus::move()
+{
+    QList <QGraphicsItem *> colliding_items= collidingItems();
+    for(int i=0,n=collidingItems().size();i<n;++i){
+        if(typeid (*(colliding_items[i]))==typeid (ppal)){
+            delete colliding_items[i];
+            delete this;
+            return;
+        }
+    }
+}

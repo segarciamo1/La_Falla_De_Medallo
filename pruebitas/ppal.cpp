@@ -6,6 +6,7 @@
 #include "platform.h"
 #include "mainwindow.h"
 #include "capucho.h"
+#include "bonus.h"
 
 ppal::ppal(QGraphicsItem *parent):
     QGraphicsPixmapItem(parent)
@@ -168,5 +169,6 @@ void ppal::spawn()
         scene()->addItem(capu);
 
     }
+
     conta++;
 }

@@ -9,6 +9,7 @@
 #include<ppal.h>
 #include<enemigo.h>
 #include <platform.h>
+#include <bonus.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -29,6 +30,7 @@ private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
     platform *plataforma;
+    bonus * bonu;
 
     ppal *jugador;
 
