@@ -6,83 +6,52 @@
 #include <proyectil.h>
 #include <bonus.h>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , uiq(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    uiq->setupUi(this);
     scene=new QGraphicsScene;
     scene->setSceneRect(100,0,800,455);
-    ui->graphicsView->setScene(scene);
-    ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    ui->graphicsView->setFixedSize(800,455);
-    QImage fondo("../pruebitas/Terminadas/Fondo_Universidad.jpg");
+    uiq->graphicsView->setScene(scene);
+    uiq->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    uiq->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    uiq->graphicsView->setFixedSize(800,455);
+    QImage fondo(":/fondos/Imagenes/Fondo_Universidad.jpg");
     QBrush b1(fondo);
-    ui->graphicsView->setBackgroundBrush(b1);
+    uiq->graphicsView->setBackgroundBrush(b1);
     jugador= new ppal();
     scene->addItem(jugador);
     jugador->start();
     QTimer *timer = new QTimer(this);
 
-    connect(timer,SIGNAL(timeout()), this, SLOT(suma()));
+//    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
 
     timer->start(100);
     plataforma= new platform(200,100);
 
     scene->addItem(plataforma);
-    ene=new enemigo();
-    scene->addItem(ene);
-
-
-    bonu=new bonus(100,200);
-    scene->addItem(bonu);
-    show();
-    /*
+    //ene=new enemigo();
+    //scene->addItem(ene);
     for (int indx=1;indx<=10 ;indx++ ) {
-        bonuss.append(new bonus(100*indx,200));
-        qDebug() << "se crea el bonus"<<indx;
-        scene->addItem(bonuss.last());
-
-    }
-
-    for (int indx=1;indx<=10 ;indx++ ) {
-        enemys.append(new enemigo(150*indx,100));
+        enemys.append(new enemigo(200*indx,100));
         qDebug() << "se crea los enemigos"<<indx;
         scene->addItem(enemys.last());
 
     }
+    capu= new capucho();
+    scene->addItem(capu);
 
-    for (int indx=1;indx<4 ;indx++ ) {
-        capuchos.append(new capucho(600*indx));
-        qDebug() << "se crea los ecapu1d"<<indx;
-        scene->addItem(capuchos.last());
-
-    }
-
-    for (int indx=1;indx<4 ;indx++ ) {
-        capuchos2.append(new capucho(600*indx+3000));
-        qDebug() << "se crea los capuchos2"<<indx;
-        scene->addItem(capuchos2.last());
-
-    }
-    for (int indx=1;indx<=8 ;indx++ ) {
-        plataformas.append(new platform(200*indx,100));
-        qDebug() << "se crean las plataformas"<<indx;
-        scene->addItem(plataformas.last());
-
-    }
-*/
-
-
-
-
+    bonu=new bonus(100,200);
+    scene->addItem(bonu);
+    show();
 
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete uiq;
 }
 
 void MainWindow::keyPressEvent(QKeyEvent *ev)
@@ -93,31 +62,30 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
          //setPos(pos().x()-vx,pos().y());
          jugador->setPosx(jugador->getPosx()-jugador->getVx());
          scene->setSceneRect(jugador->getPosx(),0,800,455);
-
-
-
-
+         jugador->ppal::Animacion_Izquierda();
     }
     else if(ev->key()==Qt::Key_D){
         //setPos(pos().x()+vx,pos().y());
         jugador->setPosx(jugador->getPosx()+jugador->getVx());
         scene->setSceneRect(jugador->getPosx(),0,800,455);
-
+        jugador->ppal::Animacion_Derecha();
 
     }
     else if(ev->key()==Qt::Key_W){
          jugador->setVy(40);
          jugador->setSalto(true);
+
+         jugador->ppal::Animacion_Salto();
     }
     else if(ev->key()==Qt::Key_Space){
         proyectil * disparo= new proyectil();
         disparo->setPos(jugador->getPosx(),jugador->getPosy());
         scene->addItem(disparo);
-
     }
-
-
-
+    else if(ev->key()==Qt::Key_Escape){
+        hide();
+        guardarpartida1->show();
+    }
 }
 
 void MainWindow::suma()
@@ -125,14 +93,8 @@ void MainWindow::suma()
     static int conta=0;
     if(conta==10){
         puntuacion=bonu->getPuntuacion()+ene->getPuntuacion()+capu->getPuntuacion();
-        qDebug() << "sumonobnu"<<puntuacion;
+//        qDebug() << "sumonobnu"<<puntuacion;
         conta=0;
     }
     conta++;
-
 }
-
-
-
-
-

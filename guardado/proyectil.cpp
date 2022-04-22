@@ -10,17 +10,16 @@
 
 proyectil::proyectil()
 {
-    setPixmap(QPixmap(":/Items/Terminadas/Libro.png"));
+    setPixmap(QPixmap(":/items/Imagenes/Libro.png"));
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
 }
 
-
 void proyectil::move()
 {
 
-    //static int puntuacion2=0;
+    static int puntuacion2=0;
     QList <QGraphicsItem *> colliding_items= collidingItems();
     for(int i=0,n=collidingItems().size();i<n;++i){
         if(typeid (*(colliding_items[i]))==typeid (enemigo) || typeid (*(colliding_items[i]))==typeid (capucho)){
@@ -34,9 +33,7 @@ void proyectil::move()
     if(pos().x()>450){
         scene()->removeItem(this);
         delete this;
-
     }
-
 }
 
 int proyectil::getPuntuacion() const
