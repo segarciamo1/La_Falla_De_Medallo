@@ -41,7 +41,11 @@ private:
     capucho * capu;
     enemigo * ene;
     int puntuacion=0;
-
+    QList <QGraphicsPixmapItem*> bonuss;
+    QList <QGraphicsPixmapItem*> enemys;
+    QList <QGraphicsPixmapItem*> capuchos;
+    QList <QGraphicsPixmapItem*> capuchos2;
+    QList <QGraphicsRectItem*> plataformas;
 
 
 };

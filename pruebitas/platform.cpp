@@ -7,15 +7,14 @@ platform::platform(float x, float y)
 {
     posx=x;
     posy=y;
-    setRect(0,0,sizex,sizey);
+    setRect(posx,posy,sizex,sizey);
     posicion();
     QBrush brush;
     brush.setStyle(Qt::SolidPattern);
     brush.setColor(Qt::black);
     setBrush(brush);
     connect(mov_timer1,SIGNAL(timeout()),this,SLOT(mov()));
-    qDebug() << "se creo plataforma";
-    mov_timer1->start(10);
+    mov_timer1->start(100);
 }
 
 void platform::posicion()

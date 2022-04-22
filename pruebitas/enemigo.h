@@ -10,6 +10,7 @@ class enemigo:public QObject,public QGraphicsPixmapItem
 Q_OBJECT
 public:
     enemigo(QGraphicsItem *parent=0);
+    enemigo(float x,float y);
     void posicion();
     void posicion(int newX,int newY);
     int getPuntuacion() const;

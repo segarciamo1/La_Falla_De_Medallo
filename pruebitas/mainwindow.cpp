@@ -33,12 +33,49 @@ MainWindow::MainWindow(QWidget *parent)
     scene->addItem(plataforma);
     ene=new enemigo();
     scene->addItem(ene);
-    capu= new capucho();
-    scene->addItem(capu);
+
 
     bonu=new bonus(100,200);
     scene->addItem(bonu);
     show();
+    for (int indx=1;indx<=10 ;indx++ ) {
+        bonuss.append(new bonus(100*indx,200));
+        qDebug() << "se crea el bonus"<<indx;
+        scene->addItem(bonuss.last());
+
+    }
+    for (int indx=1;indx<=10 ;indx++ ) {
+        enemys.append(new enemigo(150*indx,100));
+        qDebug() << "se crea los enemigos"<<indx;
+        scene->addItem(enemys.last());
+
+    }
+    for (int indx=1;indx<4 ;indx++ ) {
+        capuchos.append(new capucho(600*indx));
+        qDebug() << "se crea los ecapu1d"<<indx;
+        scene->addItem(capuchos.last());
+
+    }
+    for (int indx=1;indx<4 ;indx++ ) {
+        capuchos2.append(new capucho(600*indx+3000));
+        qDebug() << "se crea los capuchos2"<<indx;
+        scene->addItem(capuchos2.last());
+
+    }
+    /*for (int indx=1;indx<=8 ;indx++ ) {
+        plataformas.append(new platform(200*indx,100));
+        qDebug() << "se crean las plataformas"<<indx;
+        scene->addItem(plataformas.last());
+
+    }
+*/
+
+
+
+    //capuchos.append(new capucho(20));
+    //scene->addItem(capuchos.last());
+
+
 }
 
 MainWindow::~MainWindow()
