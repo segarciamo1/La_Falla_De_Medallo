@@ -1,7 +1,7 @@
 #include "proyectil.h"
 #include <QTimer>
 #include <QGraphicsScene>
-#include "QtDebug"
+#include "QDebug"
 #include <QList>
 #include "enemigo.h"
 
@@ -27,7 +27,7 @@ void proyectil::move()
     if(pos().x()+rect().height()>450){
         scene()->removeItem(this);
         delete this;
-        qDebug() << "se borro";
+
     }
 
 }

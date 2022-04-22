@@ -23,7 +23,7 @@ private:
     float fx;
     float rad=1;
     float angulo;
-    const float w=0.1;
+    const float w=0.4;
 };
 
 #endif // ENEMIGO_H

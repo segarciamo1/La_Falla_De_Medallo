@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent)
     QTimer *timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
     timer->start(100);
+    plataforma= new platform(200,100);
+    scene->addItem(plataforma);
    // pajaros.append(new pajaro(250,400,50));
     //scene->addItem(pajaros.last());
    // ave= new pajaro(100,300,100);

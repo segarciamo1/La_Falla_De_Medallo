@@ -7,6 +7,7 @@
 
 #include<ppal.h>
 #include<enemigo.h>
+#include <platform.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -24,6 +25,7 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
+    platform *plataforma;
 
     ppal *jugador;
 

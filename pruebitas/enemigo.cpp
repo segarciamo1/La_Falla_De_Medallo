@@ -8,13 +8,13 @@
 enemigo::enemigo(QGraphicsItem *parent)
 {
 
-
+    static int conta =1;
     setRect(400,0,50,50);
-    posicion(400,300);
+    posicion(400*conta,400);
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
-
     timer->start(50);
+
 
 }
 
@@ -33,7 +33,7 @@ void enemigo::move()
     angulo=angulo+w*DT;
     posx=posx+rad*cos(angulo);
     posy=posy+rad*sin(angulo);
-    qDebug()<<"x: "<<posx<<", y: "<<posy;
+    //qDebug()<<"x: "<<posx<<", y: "<<posy;
     posicion();
 }
 

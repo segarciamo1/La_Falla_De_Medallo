@@ -12,6 +12,7 @@ SOURCES += \
     enemigo.cpp \
     main.cpp \
     mainwindow.cpp \
+    platform.cpp \
     ppal.cpp \
     proyectil.cpp \
     score.cpp
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     enemigo.h \
     mainwindow.h \
+    platform.h \
     ppal.h \
     proyectil.h \
     score.h

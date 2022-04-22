@@ -19,6 +19,25 @@ public:
     void start();
     void stop();
 
+    float getPosx() const;
+    void setPosx(float newPosx);
+
+    float getPosy() const;
+    void setPosy(float newPosy);
+
+    float getVy() const;
+    void setVy(float newVy);
+
+    bool getSobre() const;
+    void setSobre(bool newSobre);
+
+    int getTamanoX() const;
+
+    int getTamanoY() const;
+
+    bool getSalto() const;
+    void setSalto(bool newSalto);
+
 public slots:
     void spawn();
     void movy();
@@ -29,7 +48,10 @@ private:
     float vy=0;
     float vx=8;
     bool salto;
+    bool sobre;
     QTimer * timerY;
+    const int tamanoX=25;
+    const int tamanoY=25;
 
 
 };
