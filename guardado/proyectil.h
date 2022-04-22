@@ -5,6 +5,7 @@
 #include <QGraphicsItem>
 #include <QGraphicsRectItem>
 #include <QGraphicsPixmapItem>
+#include "score.h"
 
 class proyectil : public QObject,public QGraphicsPixmapItem{
   Q_OBJECT
@@ -26,6 +27,7 @@ public slots:
 
 private:
     bool sumaMuertos=false;
+    score *score1;
     int puntuacion=0;
     int limite=850;
     short int FotogramaDis = 1;

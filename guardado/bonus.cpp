@@ -1,6 +1,8 @@
 #include "bonus.h"
 #include "ppal.h"
 #include "score.h"
+#include "mainwindow.h"
+
 
 bonus::bonus(float x,float y)
 
@@ -12,6 +14,7 @@ bonus::bonus(float x,float y)
     QTimer *timer1= new QTimer;
     connect(timer1,SIGNAL(timeout()), this, SLOT(move()));
     timer1->start(50);
+    score1= new score();
 
 }
 
@@ -57,7 +60,7 @@ void bonus::move()
     for(int i=0,n=collidingItems().size();i<n;++i){
         if(typeid (*(colliding_items[i]))==typeid (ppal)){
             delete this;
-            puntaje->increase();
+            score1->increase();
             incpuntaje+=10;
             puntuacion=incpuntaje;
             //qDebug() << "la puntuacion  de bonus es"<<puntuacion;

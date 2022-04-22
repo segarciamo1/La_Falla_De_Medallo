@@ -41,7 +41,7 @@ void Menuinicial::on_Posiciones_clicked()
                     espacios +=1;
                     Informacion += Palabra + ' ';
                 }
-                else if(espacios ==2 ) {
+                else if(espacios ==3) {
                     espacios +=1;
                     Informacion += Palabra + '\n';
                 }

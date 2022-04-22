@@ -7,6 +7,7 @@
 #include "capucho.h"
 #include "ppal.h"
 #include "mainwindow.h"
+#include "score.h"
 
 proyectil::proyectil()
 {
@@ -14,6 +15,7 @@ proyectil::proyectil()
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
+    score1= new score();
 
 }
 
@@ -26,11 +28,11 @@ void proyectil::move()
         if(typeid (*(colliding_items[i]))==typeid (enemigo) || typeid (*(colliding_items[i]))==typeid (capucho)){
             delete colliding_items[i];
             delete this;
-
+            score1->increase();
             return;
         }
     }
-    setPos(x()+10,y());
+    setPos(x()+20,y());
     //qDebug() << "la x esta en "<<x();
     if(pos().x()>limite+getPosicionjug()){
         scene()->removeItem(this);

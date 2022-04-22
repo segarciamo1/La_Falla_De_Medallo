@@ -28,7 +28,7 @@ public slots:
 
 private:
     QTimer *timer1=new QTimer();
-    score *puntaje= new score();
+    score *score1;
     float posx;
     float posy;
     int puntuacion;

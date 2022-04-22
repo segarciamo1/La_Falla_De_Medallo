@@ -3,23 +3,25 @@
 
 score::score(QGraphicsItem *parent)
 {
-
+    scores=0;
     setPlainText(QString("Score: ")+QString::number(scores));
-    setDefaultTextColor(Qt::blue);
+    setDefaultTextColor(Qt::darkRed);
     setFont(QFont("times",16));
 }
 
 void score::increase()
 {
     static int conta=10;
-    qDebug() << "estoy entrando a increase"<<scores;
-    setScores(getScores()+conta);
-    setPlainText(QString("Score:  ")+QString::number(scores));
+    setScores(conta);
+    setPlainText(QString("Score que esperamos que suba:  ")+QString::number(scores));
+    qDebug() << "estoy entrando a increase en el uktimo"<<scores;
+    conta +=10;
 }
 
 int score::getScore()
 {
-    return scores;
+    static int contador=scores;
+    return contador;
 }
 
 int score::getScores() const

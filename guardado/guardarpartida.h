@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QGraphicsTextItem>
 #include <QTextStream>
+#include <score.h>
 
 namespace Ui {
 class GuardarPartida;
@@ -29,8 +30,9 @@ private slots:
 
 private:
     Ui::GuardarPartida *ui;
+    score *score1;
     bool des;
-    int PosXJ, PosYJ,PosXP,PosYP, vidas,score,score_maxi;
+    int PosXJ, PosYJ,PosXP,PosYP, vidas,score_maxi;
     short int cont = 0, espacios =0;
 };
 

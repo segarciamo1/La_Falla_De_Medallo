@@ -30,6 +30,7 @@ public:
 public:
     void keyPressEvent(QKeyEvent *ev);
     void sumapuntuacion();
+    score * puntaje;
 
 public slots:
     void suma();
@@ -43,7 +44,7 @@ private:
     ppal *jugador;
     capucho * capu;
     enemigo * ene;
-    score * puntaje;
+
     QList <QGraphicsPixmapItem*> enemys;
     QList <QGraphicsPixmapItem*> bonuss;
     QList <QGraphicsPixmapItem*> capuchos;

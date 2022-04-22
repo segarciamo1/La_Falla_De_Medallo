@@ -12,7 +12,7 @@ public:
     void setScores(int newScores);
 
 private:
-    int scores=0;
+    int scores;
 };
 
 #endif // SCORE_H

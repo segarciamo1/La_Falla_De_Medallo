@@ -7,6 +7,7 @@ GuardarPartida::GuardarPartida(QWidget *parent) :
     ui(new Ui::GuardarPartida)
 {
     ui->setupUi(this);
+    score1= new score();
 }
 
 GuardarPartida::~GuardarPartida()
@@ -45,11 +46,15 @@ void GuardarPartida::guardarpartida()
         }
         espacios = 0;
     }
+    QString s = QString::number(score1->getScore());
+    qDebug() <<"el valor de puntaje es"<<score1->getScore();
+
     if(cont ==2){
         QTextStream out(&archivo);
-        out << usuario + ' ' + contrasea + ' ' + "puntuacion"+' '+"0"+' '+'0'+' '+'0'+' '+'0' + '\n';
+        out << usuario + ' ' + contrasea + ' ' + s +' '+"0"+' '+'0'+' '+'0'+' '+'0' + '\n';
         QMessageBox::information(this,"Iniciar sesion","Usuario creado correctamente");
         close();
+        qDebug() << "el puntaje es" << s;
     }
     else if (cont ==1){
         if(des){QMessageBox::warning(this,"Iniciar sesion","Contraseña Incorrecto");}

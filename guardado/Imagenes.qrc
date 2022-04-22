@@ -11,6 +11,7 @@
         <file>Imagenes/Instrucciones.png</file>
         <file>Imagenes/About.png</file>
         <file>Imagenes/IniciarSesion.png</file>
+        <file>Imagenes/GuardarPartida.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>Imagenes/Huevo.png</file>

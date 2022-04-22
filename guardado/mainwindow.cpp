@@ -34,20 +34,19 @@ MainWindow::MainWindow(QWidget *parent)
     //plataforma= new platform(200,100);
 
     //scene->addItem(plataforma);
-    for (int indx=1;indx<=8 ;indx++ ) {
-        plataformas.append(new platform(200*indx,100));
-        qDebug() << "se crean las plataformas"<<indx;
-        scene->addItem(plataformas.last());
+    for (int indx=1;indx<=14 ;indx++ ) {
+         plataformas.append(new platform(400*indx,160));
+ //        qDebug() << "se crean las plataformas"<<indx;
+         scene->addItem(plataformas.last());
 
-    }
-    //ene=new enemigo();
-    //scene->addItem(ene);
-    for (int indx=1;indx<=10 ;indx++ ) {
-        enemys.append(new enemigo(400*indx,100));
-        qDebug() << "se crea los enemigos"<<indx;
-        scene->addItem(enemys.last());
-
-    }
+     }
+     //ene=new enemigo();
+     //scene->addItem(ene);
+     for (int indx=1;indx<=12 ;indx++ ) {
+         enemys.append(new enemigo(500*indx,100));
+ //        qDebug() << "se crea los enemigos"<<indx;
+         scene->addItem(enemys.last());
+     }
     //capu= new capucho();
     //scene->addItem(capu);
     for (int indx=1;indx<4 ;indx++ ) {
@@ -66,8 +65,8 @@ MainWindow::MainWindow(QWidget *parent)
     }
     show();
 
-}
 
+}
 MainWindow::~MainWindow()
 {
     delete uiq;
