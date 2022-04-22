@@ -46,7 +46,7 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
     if(ev->key()==Qt::Key_A){
          //setPos(pos().x()-vx,pos().y());
          jugador->setPosx(jugador->getPosx()-jugador->getVx());
-         scene->setSceneRect(jugador->getPosx(),0,500,455);
+         scene->setSceneRect(jugador->getPosx(),0,800,455);
 
 
 
@@ -55,7 +55,7 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
     else if(ev->key()==Qt::Key_D){
         //setPos(pos().x()+vx,pos().y());
         jugador->setPosx(jugador->getPosx()+jugador->getVx());
-        scene->setSceneRect(jugador->getPosx(),0,500,455);
+        scene->setSceneRect(jugador->getPosx(),0,800,455);
 
 
     }
@@ -67,9 +67,20 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
         proyectil * disparo= new proyectil();
         disparo->setPos(jugador->getPosx(),jugador->getPosy());
         scene->addItem(disparo);
+
     }
 
 
 
+}
+
+int MainWindow::getPuntuacion() const
+{
+    return puntuacion;
+}
+
+void MainWindow::setPuntuacion(int newPuntuacion)
+{
+    puntuacion = newPuntuacion;
 }
 

@@ -26,12 +26,16 @@ public:
 public:
     void keyPressEvent(QKeyEvent *ev);
 
+
+    int getPuntuacion() const;
+    void setPuntuacion(int newPuntuacion);
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
     platform *plataforma;
     bonus * bonu;
-
+    int puntuacion=0;
     ppal *jugador;
 
 

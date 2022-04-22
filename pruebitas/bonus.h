@@ -18,6 +18,9 @@ public:
 
     float getPosy() const;
     void setPosy(float newPosy);
+    int getPuntuacion() const;
+    void setPuntuacion(int newPuntuacion);
+
 public slots:
     void move();
 
@@ -25,6 +28,7 @@ private:
      QTimer *timer1=new QTimer();
     float posx;
     float posy;
+    int puntuacion;
 
 };
 #endif // BONUS_H

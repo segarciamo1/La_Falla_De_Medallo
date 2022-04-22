@@ -12,8 +12,17 @@ class proyectil : public QObject,public QGraphicsPixmapItem{
 public:
     proyectil();
 
+    bool getSumaMuertos() const;
+    void setSumaMuertos(bool newSumaMuertos);
+
+    int getPuntuacion() const;
+    void setPuntuacion(int newPuntuacion);
+
 public slots:
     void move();
+private:
+    bool sumaMuertos=false;
+    int puntuacion=0;
 };
 
 #endif // PROYECTIL_H

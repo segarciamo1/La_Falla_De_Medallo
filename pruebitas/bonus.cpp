@@ -46,11 +46,25 @@ void bonus::setPosy(float newPosy)
 
 void bonus::move()
 {
+    static int incpuntaje=0;
     QList <QGraphicsItem *> colliding_items= collidingItems();
     for(int i=0,n=collidingItems().size();i<n;++i){
         if(typeid (*(colliding_items[i]))==typeid (ppal)){
             delete this;
+            incpuntaje+=10;
+            puntuacion=incpuntaje;
+            qDebug() << "la puntuacion es"<<puntuacion;
             return;
         }
     }
+}
+
+int bonus::getPuntuacion() const
+{
+    return puntuacion;
+}
+
+void bonus::setPuntuacion(int newPuntuacion)
+{
+    puntuacion = newPuntuacion;
 }

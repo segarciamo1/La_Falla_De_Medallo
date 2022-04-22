@@ -46,6 +46,11 @@ void ppal::stop()
     timerY->stop();
 }
 
+void ppal::sumaPuntuacion()
+{
+
+}
+
 
 void ppal::movy()
 {
@@ -81,11 +86,16 @@ void ppal::damage()
 {
     QList <QGraphicsItem *> colliding_items= collidingItems();
     for(int i=0,n=collidingItems().size();i<n;++i){
-        if(typeid (*(colliding_items[i]))!=typeid (platform)){
+        if(typeid (*(colliding_items[i]))!=typeid (platform) and typeid (*(colliding_items[i]))!=typeid (proyectil)){
             vidas-=1;
             qDebug() << "las vidas son" << vidas;
         }
     }
+}
+
+void ppal::score()
+{
+
 }
 
 int ppal::getPuntuacion() const
