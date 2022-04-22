@@ -3,6 +3,7 @@ debug/bonus.o
 debug/capucho.o
 debug/enemigo.o
 debug/ganaste.o
+debug/guardarpartida.o
 debug/iniciarsesion.o
 debug/instrucciones.o
 debug/main.o
@@ -20,6 +21,7 @@ debug/moc_bonus.o
 debug/moc_capucho.o
 debug/moc_enemigo.o
 debug/moc_ganaste.o
+debug/moc_guardarpartida.o
 debug/moc_iniciarsesion.o
 debug/moc_instrucciones.o
 debug/moc_mainwindow.o

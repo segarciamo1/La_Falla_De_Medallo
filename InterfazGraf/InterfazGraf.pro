@@ -14,6 +14,7 @@ SOURCES += \
     capucho.cpp \
     enemigo.cpp \
     ganaste.cpp \
+    guardarpartida.cpp \
     iniciarsesion.cpp \
     instrucciones.cpp \
     main.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     capucho.h \
     enemigo.h \
     ganaste.h \
+    guardarpartida.h \
     iniciarsesion.h \
     instrucciones.h \
     mainwindow.h \
@@ -46,6 +48,7 @@ HEADERS += \
 FORMS += \
     about.ui \
     ganaste.ui \
+    guardarpartida.ui \
     iniciarsesion.ui \
     instrucciones.ui \
     mainwindow.ui \

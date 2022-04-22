@@ -27,12 +27,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(450, 450);
+        MainWindow->resize(800, 455);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         graphicsView = new QGraphicsView(centralwidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(0, 0, 450, 450));
+        graphicsView->setGeometry(QRect(0, 0, 795, 449));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         QBrush brush(QColor(0, 0, 0, 255));

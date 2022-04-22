@@ -6,6 +6,7 @@
 #include <proyectil.h>
 #include <bonus.h>
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , uiq(new Ui::MainWindow)
@@ -25,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     jugador->start();
     QTimer *timer = new QTimer(this);
 
-    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
+//    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
 
     timer->start(100);
     plataforma= new platform(200,100);
@@ -73,7 +74,10 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
         proyectil * disparo= new proyectil();
         disparo->setPos(jugador->getPosx(),jugador->getPosy());
         scene->addItem(disparo);
-
+    }
+    else if(ev->key()==Qt::Key_Escape){
+        hide();
+        guardarpartida1->show();
     }
 }
 
@@ -86,5 +90,4 @@ void MainWindow::suma()
         conta=0;
     }
     conta++;
-
 }

@@ -13,6 +13,8 @@
 #include <capucho.h>
 #include <proyectil.h>
 
+#include "guardarpartida.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -33,10 +35,10 @@ public slots:
 
 private:
     Ui::MainWindow *uiq;
+    GuardarPartida * guardarpartida1 = new GuardarPartida();
     QGraphicsScene* scene;
     platform *plataforma;
     bonus * bonu;
-
     ppal *jugador;
     capucho * capu;
     enemigo * ene;

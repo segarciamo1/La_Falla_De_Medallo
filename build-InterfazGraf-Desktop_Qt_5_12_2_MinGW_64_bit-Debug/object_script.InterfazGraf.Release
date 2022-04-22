@@ -3,6 +3,7 @@ release/bonus.o
 release/capucho.o
 release/enemigo.o
 release/ganaste.o
+release/guardarpartida.o
 release/iniciarsesion.o
 release/instrucciones.o
 release/main.o
@@ -20,6 +21,7 @@ release/moc_bonus.o
 release/moc_capucho.o
 release/moc_enemigo.o
 release/moc_ganaste.o
+release/moc_guardarpartida.o
 release/moc_iniciarsesion.o
 release/moc_instrucciones.o
 release/moc_mainwindow.o
