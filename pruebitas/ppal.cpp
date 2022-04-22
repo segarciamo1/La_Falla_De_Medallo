@@ -57,8 +57,16 @@ void ppal::movy()
         posy=290;
 
     }
+    else if(sobre==true){
+        posicion(posx,posy);
+    }
     else{
         posicion();
+    }
+    QList<QGraphicsItem *> list = collidingItems() ;
+    if (list.size()==0){
+        salto=false;
+        sobre=false;
     }
 
 

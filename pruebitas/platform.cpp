@@ -51,20 +51,20 @@ void platform::mov()
     QList<QGraphicsItem *> list = collidingItems();
     foreach(QGraphicsItem * i , list)
     {
-        ppal * item= dynamic_cast<ppal *>(i); //Con esto se hace la colision con cada plataforma
+        ppal * item= dynamic_cast<ppal *>(i);
         if (item)
         {
             if (item->getPosy()<posy+sizey/2){
                 item->setSobre(true);
                 if (!item->getSalto()){
-                item->setPosy(100);
-                item->setVy(0);
+                     item->setPosy(posy-item->getTamanoY()-35);
+                    item->setVy(0);
                 qDebug() << "pego plataforma";
                 }
             }
-           if (item->getPosy()>posy+sizey-5){
-                item->setPosy(posy+sizey);
-                item->setVy(0);
+           if (item->getPosy()>posy+sizey-10){
+
+                item->setVy(-3);
                 qDebug() << "este interactua";
 
             }

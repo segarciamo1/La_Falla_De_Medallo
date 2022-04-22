@@ -57,7 +57,7 @@ private:
     float vy=0;
     float vx=8;
     bool salto;
-    bool sobre=true;
+    bool sobre=false;
     QTimer * timerY;
     const int tamanoX=25;
     const int tamanoY=25;
