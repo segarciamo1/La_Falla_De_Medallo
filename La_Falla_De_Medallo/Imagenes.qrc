@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/fondos">
+        <file>Imagenes/Fondo_Campo.jpg</file>
+        <file>Imagenes/Fondo_Ciudad.jpg</file>
+        <file>Imagenes/Fondo_Universidad.jpg</file>
+        <file>Imagenes/FELICIDADES!.png</file>
+        <file>Imagenes/Boton1.png</file>
+        <file>Imagenes/Fallaste.png</file>
+        <file>Imagenes/NuevoUsuario.png</file>
+        <file>Imagenes/inicial.png</file>
+        <file>Imagenes/Instrucciones.png</file>
+        <file>Imagenes/About.png</file>
+        <file>Imagenes/IniciarSesion.png</file>
+        <file>Imagenes/GuardarPartida.png</file>
+    </qresource>
+    <qresource prefix="/items">
+        <file>Imagenes/Huevo.png</file>
+        <file>Imagenes/Mochila.png</file>
+        <file>Imagenes/Pizza.png</file>
+        <file>Imagenes/VidaExtra.png</file>
+        <file>Imagenes/Water.png</file>
+        <file>Imagenes/Carro.png</file>
+        <file>Imagenes/ValaLadron.png</file>
+        <file>Imagenes/Libro.png</file>
+        <file>Imagenes/Libro2.png</file>
+    </qresource>
+    <qresource prefix="/personajes">
+        <file>Imagenes/Aves.png</file>
+        <file>Imagenes/Capucho.png</file>
+        <file>Imagenes/Ladron.png</file>
+        <file>Imagenes/PersonajePrincipal.png</file>
+        <file>Imagenes/Vaca.png</file>
+        <file>Imagenes/PersonajePrincipal_Derecha2.png</file>
+        <file>Imagenes/PersonajePrincipal_DerechaSalto.png</file>
+        <file>Imagenes/PersonajePrincipal_Izquieda1.png</file>
+        <file>Imagenes/PersonajePrincipal_Izquieda2.png</file>
+        <file>Imagenes/Aves2.png</file>
+        <file>Imagenes/Aves3.png</file>
+        <file>Imagenes/Aves4.png</file>
+        <file>Imagenes/Aves5.png</file>
+        <file>Imagenes/Aves6.png</file>
+        <file>Imagenes/Aves7.png</file>
+        <file>Imagenes/Aves8.png</file>
+    </qresource>
+</RCC>
