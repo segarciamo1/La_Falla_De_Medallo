@@ -26,9 +26,6 @@ void proyectil::move()
         if(typeid (*(colliding_items[i]))==typeid (enemigo) || typeid (*(colliding_items[i]))==typeid (capucho)){
             delete colliding_items[i];
             delete this;
-            puntuacion2+=10;
-            puntuacion+=puntuacion2;
-            qDebug() << "la puta es"<<puntuacion<<"la puntuacion es "<<puntuacion2;
 
             return;
         }

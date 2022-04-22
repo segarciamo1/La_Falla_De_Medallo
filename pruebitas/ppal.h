@@ -18,7 +18,7 @@ public:
     void posicion(int newX,int newY);
     void start();
     void stop();
-    void sumaPuntuacion();
+    void sumaPuntuacion(int puntbonus,int puntmuertos);
 
     float getPosx() const;
     void setPosx(float newPosx);
@@ -49,7 +49,6 @@ public:
     void setPuntuacion(int newPuntuacion);
 
 public slots:
-    void spawn();
     void movy();
     void damage();
     void score();

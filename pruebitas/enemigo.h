@@ -12,6 +12,9 @@ public:
     enemigo(QGraphicsItem *parent=0);
     void posicion();
     void posicion(int newX,int newY);
+    int getPuntuacion() const;
+    void setPuntuacion(int newPuntuacion);
+
 public slots:
     void move();
 private:
@@ -21,7 +24,8 @@ private:
     float ix;
     float rad=1;
     float angulo;
-    const float w=0.4;
+    const float w=0.1;
+    int puntuacion=0;
 };
 
 #endif // ENEMIGO_H

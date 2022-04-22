@@ -31,3 +31,5 @@ void capucho::move()
     posicion(pos_x,this->posy);
 
 }
+
+

@@ -46,10 +46,11 @@ void ppal::stop()
     timerY->stop();
 }
 
-void ppal::sumaPuntuacion()
+void ppal::sumaPuntuacion(int puntbonus, int puntmuertos)
 {
-
+    puntuacion+=puntbonus+puntmuertos;
 }
+
 
 
 void ppal::movy()
@@ -75,6 +76,7 @@ void ppal::movy()
         salto=false;
         sobre=false;
     }
+
 
 
     //qDebug() << "la posicion es" << posy;
@@ -187,19 +189,4 @@ void ppal::setPosx(float newPosx)
 {
     posx = newPosx;
 }
-void ppal::spawn()
-{
-    static int conta=0;
-    if(conta==0){
-        enemigo *ene= new enemigo();
-        scene()->addItem(ene);
 
-    }
-    if(conta==1){
-        capucho *capu= new capucho();
-        scene()->addItem(capu);
-
-    }
-
-    conta++;
-}

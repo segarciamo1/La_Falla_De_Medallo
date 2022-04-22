@@ -10,6 +10,8 @@
 #include<enemigo.h>
 #include <platform.h>
 #include <bonus.h>
+#include <capucho.h>
+#include <proyectil.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -25,20 +27,20 @@ public:
     ~MainWindow();
 public:
     void keyPressEvent(QKeyEvent *ev);
+    void sumapuntuacion();
 
-
-    int getPuntuacion() const;
-    void setPuntuacion(int newPuntuacion);
 public slots:
-    void puntuacionTotal();
+    void suma();
 
 private:
     Ui::MainWindow *ui;
     QGraphicsScene* scene;
     platform *plataforma;
     bonus * bonu;
-    int puntuacion=0;
     ppal *jugador;
+    capucho * capu;
+    enemigo * ene;
+    int puntuacion=0;
 
 
 

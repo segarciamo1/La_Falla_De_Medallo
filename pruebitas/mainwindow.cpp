@@ -24,15 +24,20 @@ MainWindow::MainWindow(QWidget *parent)
     scene->addItem(jugador);
     jugador->start();
     QTimer *timer = new QTimer(this);
-    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
+
+    connect(timer,SIGNAL(timeout()), this, SLOT(suma()));
+
     timer->start(100);
-    connect(timer,SIGNAL(timeout()), this, SLOT(puntuacionTotal()));
     plataforma= new platform(200,100);
-    proyectil *disparo= new proyectil();
+
     scene->addItem(plataforma);
+    ene=new enemigo();
+    scene->addItem(ene);
+    capu= new capucho();
+    scene->addItem(capu);
+
     bonu=new bonus(100,200);
     scene->addItem(bonu);
-
     show();
 }
 
@@ -76,26 +81,19 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
 
 }
 
-int MainWindow::getPuntuacion() const
+void MainWindow::suma()
 {
-    return puntuacion;
-}
-
-void MainWindow::setPuntuacion(int newPuntuacion)
-{
-    puntuacion = newPuntuacion;
-}
-
-void MainWindow::puntuacionTotal()
-{
-    static int cont=0;
-    if(cont==15){
+    static int conta=0;
+    if(conta==10){
         puntuacion=bonu->getPuntuacion();
-        qDebug() << "la puntuacion total es"<<puntuacion;
-        cont=0;
+        qDebug() << "sumonobnu"<<puntuacion;
+        conta=0;
     }
-    cont++;
-
+    conta++;
 
 }
+
+
+
+
 
