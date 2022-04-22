@@ -3,10 +3,6 @@
 
 score::score(QGraphicsItem *parent)
 {
-    // inciar el puntaje
-    scores = 0;
-
-    // dibujar el texto
 
     setPlainText(QString("Score: ")+QString::number(scores));
     setDefaultTextColor(Qt::blue);
@@ -15,11 +11,23 @@ score::score(QGraphicsItem *parent)
 
 void score::increase()
 {
-    scores+=10;
-    setPlainText(QString("Score: ")+QString::number(scores));
+    static int conta=10;
+    qDebug() << "estoy entrando a increase"<<scores;
+    setScores(getScores()+conta);
+    setPlainText(QString("Score:  ")+QString::number(scores));
 }
 
 int score::getScore()
 {
     return scores;
+}
+
+int score::getScores() const
+{
+    return scores;
+}
+
+void score::setScores(int newScores)
+{
+    scores = newScores;
 }

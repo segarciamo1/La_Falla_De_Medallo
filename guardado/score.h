@@ -8,8 +8,11 @@ public:
     void increase();
     int getScore();
 
+    int getScores() const;
+    void setScores(int newScores);
+
 private:
-    int scores;
+    int scores=0;
 };
 
 #endif // SCORE_H
