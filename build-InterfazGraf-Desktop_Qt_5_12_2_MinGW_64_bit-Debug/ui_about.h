@@ -33,6 +33,7 @@ public:
         VolverButtonAbout->setObjectName(QString::fromUtf8("VolverButtonAbout"));
         VolverButtonAbout->setGeometry(QRect(310, 390, 120, 48));
         QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
         font.setBold(true);
         VolverButtonAbout->setFont(font);
@@ -48,8 +49,9 @@ public:
         label->setPixmap(QPixmap(QString::fromUtf8(":/fondos/Imagenes/About.png")));
         label_2 = new QLabel(About);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(300, 240, 121, 61));
+        label_2->setGeometry(QRect(300, 230, 121, 61));
         QFont font1;
+        font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(15);
         font1.setBold(true);
         label_2->setFont(font1);

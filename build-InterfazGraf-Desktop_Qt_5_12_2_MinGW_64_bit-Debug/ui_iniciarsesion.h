@@ -51,6 +51,7 @@ public:
         QFont font;
         font.setPointSize(12);
         font.setBold(true);
+        font.setItalic(false);
         font.setStrikeOut(false);
         font.setStyleStrategy(QFont::PreferDefault);
         IniciarSeccionButton->setFont(font);
@@ -77,7 +78,12 @@ public:
         RegistraseButton = new QPushButton(Iniciarsesion);
         RegistraseButton->setObjectName(QString::fromUtf8("RegistraseButton"));
         RegistraseButton->setGeometry(QRect(180, 370, 120, 48));
-        RegistraseButton->setFont(font);
+        QFont font2;
+        font2.setPointSize(12);
+        font2.setBold(true);
+        font2.setStrikeOut(false);
+        font2.setStyleStrategy(QFont::PreferDefault);
+        RegistraseButton->setFont(font2);
         RegistraseButton->setCursor(QCursor(Qt::ArrowCursor));
         RegistraseButton->setContextMenuPolicy(Qt::NoContextMenu);
         RegistraseButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -105,14 +111,14 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Text, brush2);
         palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
         groupBox->setPalette(palette);
-        QFont font2;
-        font2.setPointSize(15);
-        font2.setBold(true);
-        font2.setItalic(false);
-        font2.setUnderline(false);
-        font2.setStrikeOut(false);
-        font2.setKerning(true);
-        groupBox->setFont(font2);
+        QFont font3;
+        font3.setPointSize(15);
+        font3.setBold(true);
+        font3.setItalic(false);
+        font3.setUnderline(false);
+        font3.setStrikeOut(false);
+        font3.setKerning(true);
+        groupBox->setFont(font3);
         groupBox->setStyleSheet(QString::fromUtf8(""));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
@@ -122,20 +128,28 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        QFont font3;
-        font3.setPointSize(16);
-        font3.setBold(true);
-        font3.setItalic(false);
-        font3.setUnderline(false);
-        font3.setStrikeOut(false);
-        font3.setKerning(true);
-        label->setFont(font3);
+        QFont font4;
+        font4.setPointSize(16);
+        font4.setBold(true);
+        font4.setItalic(false);
+        font4.setUnderline(false);
+        font4.setStrikeOut(false);
+        font4.setKerning(true);
+        label->setFont(font4);
         label->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout->addWidget(label);
 
         lineEdit_Usuario = new QLineEdit(layoutWidget);
         lineEdit_Usuario->setObjectName(QString::fromUtf8("lineEdit_Usuario"));
+        QFont font5;
+        font5.setPointSize(12);
+        font5.setBold(true);
+        font5.setItalic(false);
+        font5.setUnderline(false);
+        font5.setStrikeOut(false);
+        font5.setKerning(true);
+        lineEdit_Usuario->setFont(font5);
 
         horizontalLayout->addWidget(lineEdit_Usuario);
 
@@ -148,13 +162,14 @@ public:
         label_2 = new QLabel(layoutWidget_2);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setMinimumSize(QSize(0, 0));
-        label_2->setFont(font3);
+        label_2->setFont(font4);
         label_2->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(label_2);
 
         lineEdit_Contrasea = new QLineEdit(layoutWidget_2);
         lineEdit_Contrasea->setObjectName(QString::fromUtf8("lineEdit_Contrasea"));
+        lineEdit_Contrasea->setFont(font5);
         lineEdit_Contrasea->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(lineEdit_Contrasea);

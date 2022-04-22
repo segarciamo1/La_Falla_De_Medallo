@@ -33,7 +33,6 @@
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <italic>false</italic>
      <bold>true</bold>
@@ -69,7 +68,6 @@ border-image: url(:/fondos/Imagenes/Boton1.png);
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
@@ -97,7 +95,6 @@ border-image: url(:/fondos/Imagenes/Boton1.png);
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
      <strikeout>false</strikeout>

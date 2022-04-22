@@ -37,6 +37,7 @@ public:
         AboutButton->setObjectName(QString::fromUtf8("AboutButton"));
         AboutButton->setGeometry(QRect(280, 340, 120, 48));
         QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
         font.setBold(true);
         font.setStrikeOut(false);
@@ -53,6 +54,7 @@ public:
         VolverButton->setObjectName(QString::fromUtf8("VolverButton"));
         VolverButton->setGeometry(QRect(280, 400, 120, 48));
         QFont font1;
+        font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(12);
         font1.setBold(true);
         VolverButton->setFont(font1);

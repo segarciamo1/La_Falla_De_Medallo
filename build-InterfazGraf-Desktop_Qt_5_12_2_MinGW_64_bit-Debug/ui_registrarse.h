@@ -81,7 +81,8 @@ public:
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QFont font1;
-        font1.setPointSize(16);
+        font1.setFamily(QString::fromUtf8("Times New Roman"));
+        font1.setPointSize(15);
         font1.setBold(true);
         label->setFont(font1);
         label->setStyleSheet(QString::fromUtf8(""));
@@ -90,6 +91,10 @@ public:
 
         lineEdit_Usuario = new QLineEdit(layoutWidget);
         lineEdit_Usuario->setObjectName(QString::fromUtf8("lineEdit_Usuario"));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("Times New Roman"));
+        font2.setPointSize(12);
+        lineEdit_Usuario->setFont(font2);
 
         horizontalLayout->addWidget(lineEdit_Usuario);
 
@@ -109,6 +114,7 @@ public:
 
         lineEdit_Contrasea = new QLineEdit(layoutWidget_2);
         lineEdit_Contrasea->setObjectName(QString::fromUtf8("lineEdit_Contrasea"));
+        lineEdit_Contrasea->setFont(font2);
         lineEdit_Contrasea->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(lineEdit_Contrasea);
@@ -120,12 +126,13 @@ public:
         RegistrarseButton = new QPushButton(Registrarse);
         RegistrarseButton->setObjectName(QString::fromUtf8("RegistrarseButton"));
         RegistrarseButton->setGeometry(QRect(70, 350, 120, 48));
-        QFont font2;
-        font2.setPointSize(12);
-        font2.setBold(true);
-        font2.setStrikeOut(false);
-        font2.setStyleStrategy(QFont::PreferDefault);
-        RegistrarseButton->setFont(font2);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Times New Roman"));
+        font3.setPointSize(12);
+        font3.setBold(true);
+        font3.setStrikeOut(false);
+        font3.setStyleStrategy(QFont::PreferDefault);
+        RegistrarseButton->setFont(font3);
         RegistrarseButton->setCursor(QCursor(Qt::ArrowCursor));
         RegistrarseButton->setContextMenuPolicy(Qt::NoContextMenu);
         RegistrarseButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
@@ -136,10 +143,11 @@ public:
         VolverButtonReg = new QPushButton(Registrarse);
         VolverButtonReg->setObjectName(QString::fromUtf8("VolverButtonReg"));
         VolverButtonReg->setGeometry(QRect(270, 350, 120, 48));
-        QFont font3;
-        font3.setPointSize(12);
-        font3.setBold(true);
-        VolverButtonReg->setFont(font3);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Times New Roman"));
+        font4.setPointSize(12);
+        font4.setBold(true);
+        VolverButtonReg->setFont(font4);
         VolverButtonReg->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "color:black;\n"

@@ -40,6 +40,7 @@ public:
         ComenzarJuegoButton->setObjectName(QString::fromUtf8("ComenzarJuegoButton"));
         ComenzarJuegoButton->setGeometry(QRect(20, 310, 120, 48));
         QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
         font.setBold(true);
         font.setStrikeOut(false);
@@ -56,6 +57,7 @@ public:
         Informacion->setObjectName(QString::fromUtf8("Informacion"));
         Informacion->setGeometry(QRect(180, 310, 120, 48));
         QFont font1;
+        font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(12);
         font1.setBold(true);
         Informacion->setFont(font1);

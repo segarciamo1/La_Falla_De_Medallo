@@ -10,6 +10,9 @@ CONFIG += c++11
 
 SOURCES += \
     about.cpp \
+    bonus.cpp \
+    capucho.cpp \
+    enemigo.cpp \
     ganaste.cpp \
     iniciarsesion.cpp \
     instrucciones.cpp \
@@ -17,17 +20,28 @@ SOURCES += \
     mainwindow.cpp \
     menuinicial.cpp \
     perdiste.cpp \
-    registrarse.cpp
+    platform.cpp \
+    ppal.cpp \
+    proyectil.cpp \
+    registrarse.cpp \
+    score.cpp
 
 HEADERS += \
     about.h \
+    bonus.h \
+    capucho.h \
+    enemigo.h \
     ganaste.h \
     iniciarsesion.h \
     instrucciones.h \
     mainwindow.h \
     menuinicial.h \
     perdiste.h \
-    registrarse.h
+    platform.h \
+    ppal.h \
+    proyectil.h \
+    registrarse.h \
+    score.h
 
 FORMS += \
     about.ui \
@@ -44,20 +58,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
-    Imagenes/Carro.png \
-    Imagenes/Fondo_Ciudad.jpg \
-    Imagenes/Fondo_Universidad.jpg \
-    Imagenes/Huevo.png \
-    Imagenes/Ladron.png \
-    Imagenes/Libro.png \
-    Imagenes/Mochila.png \
-    Imagenes/PersonajePrincipal.png \
-    Imagenes/Pizza.png \
-    Imagenes/Vaca.png \
-    Imagenes/ValaLadron.png \
-    Imagenes/VidaExtra.png \
-    Imagenes/Water.png
+DISTFILES +=
 
 RESOURCES += \
     Imagenes.qrc
