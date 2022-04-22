@@ -7,6 +7,7 @@
 #include <QTimer>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
+#include <perdiste.h>
 #define GRAV 8
 #define DT 0.1
 
@@ -67,10 +68,13 @@ private:
     bool salto;
     bool sobre=false;
     QTimer * timerY;
+    QTimer * timerVidas;
+
     const int tamanoX=25;
     const int tamanoY=25;
-    int vidas=3;
+    int vidas=50;
     int puntuacion=0;
+    Perdiste * perdiste = new Perdiste();
 
 	// Variables para fotogramas
     short int FotogramaDer = 1;

@@ -2,15 +2,25 @@
 #include "proyectil.h"
 #include <QtMath>
 
-capucho::capucho()
+capucho::capucho(float posi)
 {
     setPixmap(QPixmap(":/personajes/Imagenes/Capucho.png"));
-    static int conta =1;
-    posicion(400*conta,400);
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
-    conta++;
+    movimiento=posi;
+}
+capucho::capucho(float x, float y)
+{
+
+     setPixmap(QPixmap(":/Personajes/Terminadas/Capucho.png"));
+     posx=x;
+     posy=y;
+     posicion();
+     QTimer *timer= new QTimer;
+     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
+     timer->start(50);
+
 }
 
 void capucho::posicion()
@@ -28,7 +38,8 @@ void capucho::move()
     static float cont=0,contador=0;
     float pos_x=100+100*qCos(qDegreesToRadians(cont));
     cont += 5.0f;
-    posicion(pos_x,this->posy);
+    pos_x=pos_x+movimiento;
+    posicion(pos_x,293);
     QList<QGraphicsItem *> list = collidingItems();
     foreach(QGraphicsItem * i , list)
     {

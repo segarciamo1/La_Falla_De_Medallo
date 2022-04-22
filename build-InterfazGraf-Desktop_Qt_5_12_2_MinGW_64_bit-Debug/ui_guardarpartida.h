@@ -34,6 +34,7 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QLineEdit *lineEdit_Contrasea;
+    QLabel *label_3;
 
     void setupUi(QWidget *GuardarPartida)
     {
@@ -42,8 +43,9 @@ public:
         GuardarPartida->resize(480, 480);
         guardarPartidaButton = new QPushButton(GuardarPartida);
         guardarPartidaButton->setObjectName(QString::fromUtf8("guardarPartidaButton"));
-        guardarPartidaButton->setGeometry(QRect(50, 290, 120, 48));
+        guardarPartidaButton->setGeometry(QRect(50, 360, 120, 48));
         QFont font;
+        font.setFamily(QString::fromUtf8("Times New Roman"));
         font.setPointSize(12);
         font.setBold(true);
         font.setItalic(false);
@@ -59,8 +61,9 @@ public:
 "}"));
         VolverButton = new QPushButton(GuardarPartida);
         VolverButton->setObjectName(QString::fromUtf8("VolverButton"));
-        VolverButton->setGeometry(QRect(310, 290, 120, 48));
+        VolverButton->setGeometry(QRect(310, 360, 120, 48));
         QFont font1;
+        font1.setFamily(QString::fromUtf8("Times New Roman"));
         font1.setPointSize(12);
         font1.setBold(true);
         VolverButton->setFont(font1);
@@ -72,7 +75,7 @@ public:
 ""));
         groupBox = new QGroupBox(GuardarPartida);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        groupBox->setGeometry(QRect(30, 110, 411, 131));
+        groupBox->setGeometry(QRect(30, 180, 411, 131));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -91,6 +94,7 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
         groupBox->setPalette(palette);
         QFont font2;
+        font2.setFamily(QString::fromUtf8("Times New Roman"));
         font2.setPointSize(15);
         font2.setBold(true);
         font2.setItalic(false);
@@ -108,6 +112,7 @@ public:
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
         QFont font3;
+        font3.setFamily(QString::fromUtf8("Times New Roman"));
         font3.setPointSize(16);
         font3.setBold(true);
         font3.setItalic(false);
@@ -122,6 +127,7 @@ public:
         lineEdit_Usuario = new QLineEdit(layoutWidget);
         lineEdit_Usuario->setObjectName(QString::fromUtf8("lineEdit_Usuario"));
         QFont font4;
+        font4.setFamily(QString::fromUtf8("Times New Roman"));
         font4.setPointSize(12);
         font4.setBold(true);
         font4.setItalic(false);
@@ -153,6 +159,14 @@ public:
 
         horizontalLayout_2->addWidget(lineEdit_Contrasea);
 
+        label_3 = new QLabel(GuardarPartida);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(0, 0, 480, 480));
+        label_3->setPixmap(QPixmap(QString::fromUtf8(":/fondos/Imagenes/GuardarPartida.png")));
+        label_3->raise();
+        guardarPartidaButton->raise();
+        VolverButton->raise();
+        groupBox->raise();
 
         retranslateUi(GuardarPartida);
 
@@ -166,6 +180,7 @@ public:
         VolverButton->setText(QApplication::translate("GuardarPartida", "Volver", nullptr));
         label->setText(QApplication::translate("GuardarPartida", "Usuario", nullptr));
         label_2->setText(QApplication::translate("GuardarPartida", "Contrase\303\261a", nullptr));
+        label_3->setText(QString());
     } // retranslateUi
 
 };

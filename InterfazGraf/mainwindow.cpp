@@ -24,22 +24,48 @@ MainWindow::MainWindow(QWidget *parent)
     jugador= new ppal();
     scene->addItem(jugador);
     jugador->start();
+    puntaje= new score();
+    scene->addItem(puntaje);
     QTimer *timer = new QTimer(this);
 
 //    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
 
     timer->start(100);
-    plataforma= new platform(200,100);
+    //plataforma= new platform(200,100);
 
-    scene->addItem(plataforma);
-    ene=new enemigo();
-    scene->addItem(ene);
-    capu= new capucho();
-    scene->addItem(capu);
+    //scene->addItem(plataforma);
+    for (int indx=1;indx<=14 ;indx++ ) {
+        plataformas.append(new platform(400*indx,160));
+//        qDebug() << "se crean las plataformas"<<indx;
+        scene->addItem(plataformas.last());
 
-    bonu=new bonus(100,200);
-    scene->addItem(bonu);
+    }
+    //ene=new enemigo();
+    //scene->addItem(ene);
+    for (int indx=1;indx<=12 ;indx++ ) {
+        enemys.append(new enemigo(500*indx,100));
+//        qDebug() << "se crea los enemigos"<<indx;
+        scene->addItem(enemys.last());
+
+    }
+    //capu= new capucho();
+    //scene->addItem(capu);
+    for (int indx=1;indx<4 ;indx++ ) {
+        capuchos.append(new capucho(600*indx));
+//        qDebug() << "se crea los capuchos"<<indx;
+        scene->addItem(capuchos.last());
+
+    }
+    //bonu=new bonus(100,200);
+    //scene->addItem(bonu);
+    for (int indx=1;indx<=10 ;indx++ ) {
+        bonuss.append(new bonus(100*indx,200));
+//        qDebug() << "se crea el bonus"<<indx;
+        scene->addItem(bonuss.last());
+
+    }
     show();
+
 }
 
 MainWindow::~MainWindow()
@@ -73,6 +99,7 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
     else if(ev->key()==Qt::Key_Space){
         proyectil * disparo= new proyectil();
         disparo->setPos(jugador->getPosx(),jugador->getPosy());
+        disparo->setPosicionjug(jugador->getPosx());
         scene->addItem(disparo);
     }
     else if(ev->key()==Qt::Key_Escape){

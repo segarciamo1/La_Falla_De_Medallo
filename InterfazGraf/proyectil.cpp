@@ -14,6 +14,7 @@ proyectil::proyectil()
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));
     timer->start(50);
+
 }
 
 void proyectil::move()
@@ -30,10 +31,22 @@ void proyectil::move()
         }
     }
     setPos(x()+10,y());
-    if(pos().x()>450){
+    //qDebug() << "la x esta en "<<x();
+    if(pos().x()>limite+getPosicionjug()){
         scene()->removeItem(this);
         delete this;
+        qDebug() << "se borro ese hpta";
     }
+}
+
+float proyectil::getPosicionjug() const
+{
+    return posicionjug;
+}
+
+void proyectil::setPosicionjug(float newPosicionjug)
+{
+    posicionjug = newPosicionjug;
 }
 
 int proyectil::getPuntuacion() const

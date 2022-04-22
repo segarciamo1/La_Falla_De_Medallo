@@ -206,6 +206,7 @@ release/qrc_Imagenes.cpp: ../InterfazGraf/Imagenes.qrc \
 		../InterfazGraf/Imagenes/Aves4.png \
 		../InterfazGraf/Imagenes/Aves8.png \
 		../InterfazGraf/Imagenes/IniciarSesion.png \
+		../InterfazGraf/Imagenes/GuardarPartida.png \
 		../InterfazGraf/Imagenes/Fondo_Ciudad.jpg \
 		../InterfazGraf/Imagenes/inicial.png \
 		../InterfazGraf/Imagenes/About.png \
@@ -439,6 +440,8 @@ release/moc_bonus.cpp: ../InterfazGraf/bonus.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		release/moc_predefs.h \
 		C:/Qt/5.12.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.12.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/build-InterfazGraf-Desktop_Qt_5_12_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.12.2/mingw73_64/mkspecs/win32-g++ -I"D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/InterfazGraf" -IC:/Qt/5.12.2/mingw73_64/include -IC:/Qt/5.12.2/mingw73_64/include/QtWidgets -IC:/Qt/5.12.2/mingw73_64/include/QtGui -IC:/Qt/5.12.2/mingw73_64/include/QtANGLE -IC:/Qt/5.12.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\InterfazGraf\bonus.h -o release\moc_bonus.cpp
@@ -856,6 +859,7 @@ release/moc_guardarpartida.cpp: ../InterfazGraf/guardarpartida.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream \
 		release/moc_predefs.h \
 		C:/Qt/5.12.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.12.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/build-InterfazGraf-Desktop_Qt_5_12_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.12.2/mingw73_64/mkspecs/win32-g++ -I"D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/InterfazGraf" -IC:/Qt/5.12.2/mingw73_64/include -IC:/Qt/5.12.2/mingw73_64/include/QtWidgets -IC:/Qt/5.12.2/mingw73_64/include/QtGui -IC:/Qt/5.12.2/mingw73_64/include/QtANGLE -IC:/Qt/5.12.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\InterfazGraf\guardarpartida.h -o release\moc_guardarpartida.cpp
@@ -1206,6 +1210,8 @@ release/moc_mainwindow.cpp: ../InterfazGraf/mainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -1213,8 +1219,16 @@ release/moc_mainwindow.cpp: ../InterfazGraf/mainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream \
 		release/moc_predefs.h \
 		C:/Qt/5.12.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.12.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/build-InterfazGraf-Desktop_Qt_5_12_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.12.2/mingw73_64/mkspecs/win32-g++ -I"D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/InterfazGraf" -IC:/Qt/5.12.2/mingw73_64/include -IC:/Qt/5.12.2/mingw73_64/include/QtWidgets -IC:/Qt/5.12.2/mingw73_64/include/QtGui -IC:/Qt/5.12.2/mingw73_64/include/QtANGLE -IC:/Qt/5.12.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\InterfazGraf\mainwindow.h -o release\moc_mainwindow.cpp
@@ -1353,6 +1367,7 @@ release/moc_menuinicial.cpp: ../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -1360,8 +1375,11 @@ release/moc_menuinicial.cpp: ../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h \
 		release/moc_predefs.h \
 		C:/Qt/5.12.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.12.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/build-InterfazGraf-Desktop_Qt_5_12_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.12.2/mingw73_64/mkspecs/win32-g++ -I"D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/InterfazGraf" -IC:/Qt/5.12.2/mingw73_64/include -IC:/Qt/5.12.2/mingw73_64/include/QtWidgets -IC:/Qt/5.12.2/mingw73_64/include/QtGui -IC:/Qt/5.12.2/mingw73_64/include/QtANGLE -IC:/Qt/5.12.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\InterfazGraf\menuinicial.h -o release\moc_menuinicial.cpp
@@ -1582,6 +1600,20 @@ release/moc_platform.cpp: ../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		release/moc_predefs.h \
 		C:/Qt/5.12.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.12.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/build-InterfazGraf-Desktop_Qt_5_12_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.12.2/mingw73_64/mkspecs/win32-g++ -I"D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/InterfazGraf" -IC:/Qt/5.12.2/mingw73_64/include -IC:/Qt/5.12.2/mingw73_64/include/QtWidgets -IC:/Qt/5.12.2/mingw73_64/include/QtGui -IC:/Qt/5.12.2/mingw73_64/include/QtANGLE -IC:/Qt/5.12.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\InterfazGraf\platform.h -o release\moc_platform.cpp
@@ -1687,6 +1719,22 @@ release/moc_ppal.cpp: ../InterfazGraf/ppal.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		release/moc_predefs.h \
 		C:/Qt/5.12.2/mingw73_64/bin/moc.exe
 	C:\Qt\5.12.2\mingw73_64\bin\moc.exe $(DEFINES) --include "D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/build-InterfazGraf-Desktop_Qt_5_12_2_MinGW_64_bit-Debug/release/moc_predefs.h" -IC:/Qt/5.12.2/mingw73_64/mkspecs/win32-g++ -I"D:/Users/sebil/Desktop/USB/Portafolio/1 UDEA/2021-2/Informatica II/Juego_Final/InterfazGraf" -IC:/Qt/5.12.2/mingw73_64/include -IC:/Qt/5.12.2/mingw73_64/include/QtWidgets -IC:/Qt/5.12.2/mingw73_64/include/QtGui -IC:/Qt/5.12.2/mingw73_64/include/QtANGLE -IC:/Qt/5.12.2/mingw73_64/include/QtCore -I. -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -IC:/Qt/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Tools/mingw730_64/x86_64-w64-mingw32/include ..\InterfazGraf\ppal.h -o release\moc_ppal.cpp
@@ -2060,21 +2108,6 @@ release/about.o: ../InterfazGraf/about.cpp ../InterfazGraf/about.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_about.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		../InterfazGraf/instrucciones.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\about.o ..\InterfazGraf\about.cpp
 
@@ -2173,13 +2206,31 @@ release/bonus.o: ../InterfazGraf/bonus.cpp ../InterfazGraf/bonus.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTimer \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qtimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/ppal.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qbrush.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfont.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\bonus.o ..\InterfazGraf\bonus.cpp
 
 release/capucho.o: ../InterfazGraf/capucho.cpp ../InterfazGraf/capucho.h \
@@ -2384,6 +2435,22 @@ release/enemigo.o: ../InterfazGraf/enemigo.cpp ../InterfazGraf/enemigo.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		../InterfazGraf/ppal.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		../InterfazGraf/proyectil.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QtMath \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qmath.h
@@ -2494,21 +2561,6 @@ release/ganaste.o: ../InterfazGraf/ganaste.cpp ../InterfazGraf/ganaste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_ganaste.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QFile \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMessageBox \
@@ -2523,6 +2575,7 @@ release/ganaste.o: ../InterfazGraf/ganaste.cpp ../InterfazGraf/ganaste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
@@ -2539,6 +2592,7 @@ release/ganaste.o: ../InterfazGraf/ganaste.cpp ../InterfazGraf/ganaste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -2546,8 +2600,11 @@ release/ganaste.o: ../InterfazGraf/ganaste.cpp ../InterfazGraf/ganaste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
-		../InterfazGraf/proyectil.h
+		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ganaste.o ..\InterfazGraf\ganaste.cpp
 
 release/guardarpartida.o: ../InterfazGraf/guardarpartida.cpp ../InterfazGraf/guardarpartida.h \
@@ -2660,6 +2717,7 @@ release/guardarpartida.o: ../InterfazGraf/guardarpartida.cpp ../InterfazGraf/gua
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream \
 		ui_guardarpartida.h \
 		../InterfazGraf/mainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
@@ -2681,6 +2739,7 @@ release/guardarpartida.o: ../InterfazGraf/guardarpartida.cpp ../InterfazGraf/gua
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -2688,6 +2747,7 @@ release/guardarpartida.o: ../InterfazGraf/guardarpartida.cpp ../InterfazGraf/gua
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/proyectil.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\guardarpartida.o ..\InterfazGraf\guardarpartida.cpp
@@ -2803,34 +2863,6 @@ release/iniciarsesion.o: ../InterfazGraf/iniciarsesion.cpp ../InterfazGraf/inici
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream \
 		ui_iniciarsesion.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlayout.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		../InterfazGraf/menuinicial.h \
 		../InterfazGraf/instrucciones.h \
 		../InterfazGraf/about.h \
@@ -2838,8 +2870,10 @@ release/iniciarsesion.o: ../InterfazGraf/iniciarsesion.cpp ../InterfazGraf/inici
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QList \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QtMath \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qmath.h \
@@ -2853,14 +2887,19 @@ release/iniciarsesion.o: ../InterfazGraf/iniciarsesion.cpp ../InterfazGraf/inici
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpainter.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
-		../InterfazGraf/proyectil.h
+		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\iniciarsesion.o ..\InterfazGraf\iniciarsesion.cpp
 
 release/instrucciones.o: ../InterfazGraf/instrucciones.cpp ../InterfazGraf/instrucciones.h \
@@ -2969,21 +3008,6 @@ release/instrucciones.o: ../InterfazGraf/instrucciones.cpp ../InterfazGraf/instr
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		../InterfazGraf/about.h \
 		ui_instrucciones.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QFile \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMessageBox \
@@ -2996,6 +3020,7 @@ release/instrucciones.o: ../InterfazGraf/instrucciones.cpp ../InterfazGraf/instr
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
@@ -3012,6 +3037,7 @@ release/instrucciones.o: ../InterfazGraf/instrucciones.cpp ../InterfazGraf/instr
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -3019,8 +3045,11 @@ release/instrucciones.o: ../InterfazGraf/instrucciones.cpp ../InterfazGraf/instr
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
-		../InterfazGraf/proyectil.h
+		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\instrucciones.o ..\InterfazGraf\instrucciones.cpp
 
 release/main.o: ../InterfazGraf/main.cpp ../InterfazGraf/menuinicial.h \
@@ -3157,6 +3186,7 @@ release/main.o: ../InterfazGraf/main.cpp ../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -3164,8 +3194,11 @@ release/main.o: ../InterfazGraf/main.cpp ../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -3298,6 +3331,8 @@ release/mainwindow.o: ../InterfazGraf/mainwindow.cpp ../InterfazGraf/mainwindow.
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -3305,23 +3340,17 @@ release/mainwindow.o: ../InterfazGraf/mainwindow.cpp ../InterfazGraf/mainwindow.
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream \
 		ui_mainwindow.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\InterfazGraf\mainwindow.cpp
 
@@ -3459,6 +3488,7 @@ release/menuinicial.o: ../InterfazGraf/menuinicial.cpp ../InterfazGraf/menuinici
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
@@ -3466,23 +3496,12 @@ release/menuinicial.o: ../InterfazGraf/menuinicial.cpp ../InterfazGraf/menuinici
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/proyectil.h \
-		ui_menuinicial.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h
+		../InterfazGraf/guardarpartida.h \
+		ui_menuinicial.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\menuinicial.o ..\InterfazGraf\menuinicial.cpp
 
 release/perdiste.o: ../InterfazGraf/perdiste.cpp ../InterfazGraf/perdiste.h \
@@ -3590,21 +3609,6 @@ release/perdiste.o: ../InterfazGraf/perdiste.cpp ../InterfazGraf/perdiste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		ui_perdiste.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		../InterfazGraf/menuinicial.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QFile \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMessageBox \
@@ -3619,6 +3623,7 @@ release/perdiste.o: ../InterfazGraf/perdiste.cpp ../InterfazGraf/perdiste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
@@ -3642,8 +3647,11 @@ release/perdiste.o: ../InterfazGraf/perdiste.cpp ../InterfazGraf/perdiste.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
 		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
 		../InterfazGraf/capucho.h \
-		../InterfazGraf/proyectil.h
+		../InterfazGraf/proyectil.h \
+		../InterfazGraf/guardarpartida.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\perdiste.o ..\InterfazGraf\perdiste.cpp
 
 release/platform.o: ../InterfazGraf/platform.cpp ../InterfazGraf/platform.h \
@@ -3754,6 +3762,20 @@ release/platform.o: ../InterfazGraf/platform.cpp ../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QBrush
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\platform.o ..\InterfazGraf\platform.cpp
 
@@ -3858,38 +3880,34 @@ release/ppal.o: ../InterfazGraf/ppal.cpp ../InterfazGraf/ppal.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qbasictimer.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/QKeyEvent \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qkeysequence.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qevent.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurl.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qurlquery.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfile.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/qfiledevice.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qvector2d.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/QKeyEvent \
 		../InterfazGraf/proyectil.h \
 		../InterfazGraf/enemigo.h \
 		../InterfazGraf/platform.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPainter \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpainter.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
-		../InterfazGraf/mainwindow.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/QList \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QtMath \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qmath.h \
+		../InterfazGraf/capucho.h \
 		../InterfazGraf/bonus.h \
-		../InterfazGraf/capucho.h
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ppal.o ..\InterfazGraf\ppal.cpp
 
 release/proyectil.o: ../InterfazGraf/proyectil.cpp ../InterfazGraf/proyectil.h \
@@ -4006,15 +4024,17 @@ release/proyectil.o: ../InterfazGraf/proyectil.cpp ../InterfazGraf/proyectil.h \
 		../InterfazGraf/capucho.h \
 		../InterfazGraf/ppal.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QPixmap \
-		../InterfazGraf/mainwindow.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
+		../InterfazGraf/perdiste.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QWidget \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qwidget.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpalette.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontmetrics.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfontinfo.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qsizepolicy.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qcursor.h \
+		../InterfazGraf/mainwindow.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMainWindow \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmainwindow.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qtabwidget.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QtMath \
@@ -4024,7 +4044,15 @@ release/proyectil.o: ../InterfazGraf/proyectil.cpp ../InterfazGraf/proyectil.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpainter.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/QImage \
-		../InterfazGraf/bonus.h
+		../InterfazGraf/bonus.h \
+		../InterfazGraf/score.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGraphicsTextItem \
+		../InterfazGraf/guardarpartida.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QFile \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QMessageBox \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\proyectil.o ..\InterfazGraf\proyectil.cpp
 
 release/registrarse.o: ../InterfazGraf/registrarse.cpp ../InterfazGraf/registrarse.h \
@@ -4137,34 +4165,6 @@ release/registrarse.o: ../InterfazGraf/registrarse.cpp ../InterfazGraf/registrar
 		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdialog.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtCore/QTextStream \
 		ui_registrarse.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/QVariant \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QApplication \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qcoreapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtCore/qeventloop.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qguiapplication.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qinputmethod.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QGroupBox \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qframe.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qboxlayout.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlayout.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlayoutitem.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLabel \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlabel.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QLineEdit \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextcursor.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextformat.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpen.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtextoption.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/QPushButton \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qicon.h \
 		../InterfazGraf/iniciarsesion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\registrarse.o ..\InterfazGraf\registrarse.cpp
 
@@ -4256,7 +4256,9 @@ release/score.o: ../InterfazGraf/score.cpp ../InterfazGraf/score.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qrgba64.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qimage.h \
 		C:/Qt/5.12.2/mingw73_64/include/QtGui/qpixelformat.h \
-		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtransform.h
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qtransform.h \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/QFont \
+		C:/Qt/5.12.2/mingw73_64/include/QtGui/qfont.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\score.o ..\InterfazGraf\score.cpp
 
 release/qrc_Imagenes.o: release/qrc_Imagenes.cpp 

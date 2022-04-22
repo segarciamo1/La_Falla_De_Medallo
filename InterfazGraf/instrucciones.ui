@@ -32,15 +32,14 @@
   <widget class="QPushButton" name="AboutButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>340</y>
+     <x>230</x>
+     <y>400</y>
      <width>120</width>
      <height>48</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
      <strikeout>false</strikeout>
@@ -68,7 +67,7 @@ Nosotros</string>
   <widget class="QPushButton" name="VolverButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>350</x>
      <y>400</y>
      <width>120</width>
      <height>48</height>
@@ -76,7 +75,6 @@ Nosotros</string>
    </property>
    <property name="font">
     <font>
-     <family>Times New Roman</family>
      <pointsize>12</pointsize>
      <bold>true</bold>
     </font>

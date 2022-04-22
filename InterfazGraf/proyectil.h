@@ -18,14 +18,18 @@ public:
     int getPuntuacion() const;
     void setPuntuacion(int newPuntuacion);
 
+    float getPosicionjug() const;
+    void setPosicionjug(float newPosicionjug);
+
 public slots:
     void move();
 
 private:
     bool sumaMuertos=false;
     int puntuacion=0;
-
+    int limite=850;
     short int FotogramaDis = 1;
+    float posicionjug;
 };
 
 #endif // PROYECTIL_H

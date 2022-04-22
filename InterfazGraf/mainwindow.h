@@ -12,6 +12,7 @@
 #include <bonus.h>
 #include <capucho.h>
 #include <proyectil.h>
+#include <score.h>
 
 #include "guardarpartida.h"
 
@@ -42,6 +43,11 @@ private:
     ppal *jugador;
     capucho * capu;
     enemigo * ene;
+    score * puntaje;
+    QList <QGraphicsPixmapItem*> enemys;
+    QList <QGraphicsPixmapItem*> bonuss;
+    QList <QGraphicsPixmapItem*> capuchos;
+    QList <QGraphicsRectItem*> plataformas;
     int puntuacion=0;
 };
 #endif // MAINWINDOW_H
