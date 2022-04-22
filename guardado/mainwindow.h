@@ -43,6 +43,9 @@ private:
     capucho * capu;
     enemigo * ene;
     QList <QGraphicsPixmapItem*> enemys;
+    QList <QGraphicsPixmapItem*> bonuss;
+
+    QList <QGraphicsRectItem*> plataformas;
     int puntuacion=0;
 };
 #endif // MAINWINDOW_H

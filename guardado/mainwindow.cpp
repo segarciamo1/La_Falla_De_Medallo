@@ -29,13 +29,19 @@ MainWindow::MainWindow(QWidget *parent)
 //    connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
 
     timer->start(100);
-    plataforma= new platform(200,100);
+    //plataforma= new platform(200,100);
 
-    scene->addItem(plataforma);
+    //scene->addItem(plataforma);
+    for (int indx=1;indx<=8 ;indx++ ) {
+        plataformas.append(new platform(200*indx,100));
+        qDebug() << "se crean las plataformas"<<indx;
+        scene->addItem(plataformas.last());
+
+    }
     //ene=new enemigo();
     //scene->addItem(ene);
     for (int indx=1;indx<=10 ;indx++ ) {
-        enemys.append(new enemigo(200*indx,100));
+        enemys.append(new enemigo(400*indx,100));
         qDebug() << "se crea los enemigos"<<indx;
         scene->addItem(enemys.last());
 
@@ -43,8 +49,14 @@ MainWindow::MainWindow(QWidget *parent)
     capu= new capucho();
     scene->addItem(capu);
 
-    bonu=new bonus(100,200);
-    scene->addItem(bonu);
+    //bonu=new bonus(100,200);
+    //scene->addItem(bonu);
+    for (int indx=1;indx<=10 ;indx++ ) {
+        bonuss.append(new bonus(100*indx,200));
+        qDebug() << "se crea el bonus"<<indx;
+        scene->addItem(bonuss.last());
+
+    }
     show();
 
 }
@@ -80,6 +92,7 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
     else if(ev->key()==Qt::Key_Space){
         proyectil * disparo= new proyectil();
         disparo->setPos(jugador->getPosx(),jugador->getPosy());
+        disparo->setPosicionjug(jugador->getPosx());
         scene->addItem(disparo);
     }
     else if(ev->key()==Qt::Key_Escape){
