@@ -50,6 +50,7 @@ public:
 public slots:
     void spawn();
     void movy();
+    void damage();
 
 private:
     float posx;

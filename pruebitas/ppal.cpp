@@ -18,6 +18,8 @@ ppal::ppal(QGraphicsItem *parent):
     setFlag(QGraphicsItem::ItemIsFocusable);
     timerY= new QTimer(this);
     connect(timerY,SIGNAL(timeout()), this, SLOT(movy()));
+    connect(timerY,SIGNAL(timeout()), this, SLOT(damage()));
+
 
 }
 
@@ -73,6 +75,17 @@ void ppal::movy()
     //qDebug() << "la posicion es" << posy;
 
 
+}
+
+void ppal::damage()
+{
+    QList <QGraphicsItem *> colliding_items= collidingItems();
+    for(int i=0,n=collidingItems().size();i<n;++i){
+        if(typeid (*(colliding_items[i]))!=typeid (platform)){
+            vidas-=1;
+            qDebug() << "las vidas son" << vidas;
+        }
+    }
 }
 
 int ppal::getPuntuacion() const

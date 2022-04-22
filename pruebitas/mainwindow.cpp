@@ -12,11 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     scene=new QGraphicsScene;
-    scene->setSceneRect(100,0,500,455);
+    scene->setSceneRect(100,0,800,455);
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     ui->graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    ui->graphicsView->setFixedSize(500,455);
+    ui->graphicsView->setFixedSize(800,455);
     QImage fondo("../pruebitas/Terminadas/Fondo_Universidad.jpg");
     QBrush b1(fondo);
     ui->graphicsView->setBackgroundBrush(b1);
@@ -30,13 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
     scene->addItem(plataforma);
     bonu=new bonus(100,200);
     scene->addItem(bonu);
-    //qDebug() << "paso por bonu";
-   // pajaros.append(new pajaro(250,400,50));
-    //scene->addItem(pajaros.last());
-   // ave= new pajaro(100,300,100);
-    //scene->addItem(ave);
-   // ave = new pajaro(250,400,50);
-    //scene->addItem(ave);
+
     show();
 }
 
@@ -47,6 +41,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::keyPressEvent(QKeyEvent *ev)
 {
+
     jugador->setSalto(false);
     if(ev->key()==Qt::Key_A){
          //setPos(pos().x()-vx,pos().y());

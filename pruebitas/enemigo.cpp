@@ -34,5 +34,6 @@ void enemigo::move()
     posy=posy+rad*sin(angulo);
     //qDebug()<<"x: "<<posx<<", y: "<<posy;
     posicion();
+
 }
 
