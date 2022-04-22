@@ -41,6 +41,12 @@ public:
     float getVx() const;
     void setVx(float newVx);
 
+    int getVidas() const;
+    void setVidas(int newVidas);
+
+    int getPuntuacion() const;
+    void setPuntuacion(int newPuntuacion);
+
 public slots:
     void spawn();
     void movy();
@@ -55,6 +61,8 @@ private:
     QTimer * timerY;
     const int tamanoX=25;
     const int tamanoY=25;
+    int vidas=3;
+    int puntuacion=0;
 
 
 };

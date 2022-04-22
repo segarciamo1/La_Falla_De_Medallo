@@ -51,6 +51,7 @@ void MainWindow::keyPressEvent(QKeyEvent *ev)
 
 
 
+
     }
     else if(ev->key()==Qt::Key_D){
         //setPos(pos().x()+vx,pos().y());

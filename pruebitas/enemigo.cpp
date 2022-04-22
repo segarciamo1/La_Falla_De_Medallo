@@ -7,9 +7,8 @@
 
 enemigo::enemigo(QGraphicsItem *parent)
 {
-
+    setPixmap(QPixmap(":/Personajes/Terminadas/Aves.png"));
     static int conta =1;
-    setRect(400,0,50,50);
     posicion(400*conta,400);
     QTimer *timer= new QTimer;
     connect(timer,SIGNAL(timeout()), this, SLOT(move()));

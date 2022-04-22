@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QGraphicsScene>
 #include <QList>
+#include <QtMath>
 
 #include<ppal.h>
 #include<enemigo.h>

@@ -62,13 +62,13 @@ void platform::mov()
                 qDebug() << "pego plataforma";
                 }
             }
-           /* if (item->getPosy()>posy+sizey-5){
+           if (item->getPosy()>posy+sizey-5){
                 item->setPosy(posy+sizey);
                 item->setVy(0);
                 qDebug() << "este interactua";
 
             }
-            */
+
         }
 
     }

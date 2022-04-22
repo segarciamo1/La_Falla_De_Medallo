@@ -5,6 +5,7 @@
 #include "enemigo.h"
 #include "platform.h"
 #include "mainwindow.h"
+#include "capucho.h"
 
 ppal::ppal(QGraphicsItem *parent):
     QGraphicsPixmapItem(parent)
@@ -63,6 +64,26 @@ void ppal::movy()
     //qDebug() << "la posicion es" << posy;
 
 
+}
+
+int ppal::getPuntuacion() const
+{
+    return puntuacion;
+}
+
+void ppal::setPuntuacion(int newPuntuacion)
+{
+    puntuacion = newPuntuacion;
+}
+
+int ppal::getVidas() const
+{
+    return vidas;
+}
+
+void ppal::setVidas(int newVidas)
+{
+    vidas = newVidas;
 }
 
 float ppal::getVx() const
@@ -140,6 +161,11 @@ void ppal::spawn()
     if(conta==0){
         enemigo *ene= new enemigo();
         scene()->addItem(ene);
+
+    }
+    if(conta==1){
+        capucho *capu= new capucho();
+        scene()->addItem(capu);
 
     }
     conta++;
