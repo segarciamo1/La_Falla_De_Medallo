@@ -30,20 +30,25 @@ void enemigo::posicion(int newX, int newY)
 
 void enemigo::move()
 {
-    static int cont=0;
-     posx=100+100*qCos(qDegreesToRadians(cont));
+    static int cont=0,contador=0;
+    posx=100+100*qCos(qDegreesToRadians(cont));
     posy=100+100*qSin(qDegreesToRadians(cont));
     cont += 5.0f;
     //qDeg()<<"x: "<<posx<<", y: "<<posy;
     posicion();
-    QList <QGraphicsItem *> colliding_items= collidingItems();
-    for(int i=0,n=collidingItems().size();i<n;++i){
-        if(typeid (*(colliding_items[i]))==typeid (proyectil)){
-            cont+=10;
-            puntuacion=cont;
-
+    QList<QGraphicsItem *> list = collidingItems();
+    foreach(QGraphicsItem * i , list)
+    {
+        proyectil * item= dynamic_cast<proyectil *>(i);
+        if (item)
+        {
+            contador+=10;
+            puntuacion=contador;
+            qDebug() << "la puntuacion de enemigo es"<<puntuacion;
             return;
+
         }
+
     }
 
 

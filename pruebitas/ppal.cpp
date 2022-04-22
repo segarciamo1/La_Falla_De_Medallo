@@ -58,6 +58,13 @@ void ppal::movy()
     setFocus();
     vy=vy+((-GRAV)*DT);
     posy +=-vy*DT+(0.5*DT*DT*GRAV);
+    if(posy<=1){
+
+        posicion(posx,1);
+        posy=1;
+        vy=-3;
+        qDebug() << "la posicion es" << posy;
+    }
     if(posy>=290){
 
 

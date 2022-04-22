@@ -1,4 +1,5 @@
 #include "capucho.h"
+#include "proyectil.h"
 
 capucho::capucho()
 {
@@ -25,11 +26,35 @@ void capucho::posicion(int newX, int newY)
 
 void capucho::move()
 {
-    static float cont=0;
+    static float cont=0,contador=0;
     float pos_x=100+100*qCos(qDegreesToRadians(cont));
     cont += 5.0f;
     posicion(pos_x,this->posy);
+    QList<QGraphicsItem *> list = collidingItems();
+    foreach(QGraphicsItem * i , list)
+    {
+        proyectil * item= dynamic_cast<proyectil *>(i);
+        if (item)
+        {
+            contador+=10;
+            puntuacion=contador;
+            qDebug() << "la puntuacion de capuchos es"<<puntuacion;
+            return;
 
+        }
+
+    }
+
+}
+
+int capucho::getPuntuacion() const
+{
+    return puntuacion;
+}
+
+void capucho::setPuntuacion(int newPuntuacion)
+{
+    puntuacion = newPuntuacion;
 }
 
 

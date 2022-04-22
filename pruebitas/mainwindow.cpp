@@ -85,7 +85,7 @@ void MainWindow::suma()
 {
     static int conta=0;
     if(conta==10){
-        puntuacion=bonu->getPuntuacion();
+        puntuacion=bonu->getPuntuacion()+ene->getPuntuacion()+capu->getPuntuacion();
         qDebug() << "sumonobnu"<<puntuacion;
         conta=0;
     }

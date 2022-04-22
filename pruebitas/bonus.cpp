@@ -58,7 +58,7 @@ void bonus::move()
             delete this;
             incpuntaje+=10;
             puntuacion=incpuntaje;
-            qDebug() << "la puntuacion es"<<puntuacion;
+            qDebug() << "la puntuacion  de bonus es"<<puntuacion;
             return;
         }
     }
