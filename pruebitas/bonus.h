@@ -11,6 +11,7 @@ class bonus:public QObject,public QGraphicsPixmapItem
 Q_OBJECT
 public:
     bonus(float x,float y);
+    bonus();
     void posicion();
     void posicion(int newX,int newY);
     float getPosx() const;

@@ -14,6 +14,11 @@ bonus::bonus(float x,float y)
 
 }
 
+bonus::bonus()
+{
+     setPixmap(QPixmap(":/Items/Terminadas/Pizza.png"));
+}
+
 void bonus::posicion()
 {
     setPos(posx,posy);

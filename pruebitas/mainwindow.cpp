@@ -26,7 +26,9 @@ MainWindow::MainWindow(QWidget *parent)
     QTimer *timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()), jugador, SLOT(spawn()));
     timer->start(100);
+    connect(timer,SIGNAL(timeout()), this, SLOT(puntuacionTotal()));
     plataforma= new platform(200,100);
+    proyectil *disparo= new proyectil();
     scene->addItem(plataforma);
     bonu=new bonus(100,200);
     scene->addItem(bonu);
@@ -82,5 +84,18 @@ int MainWindow::getPuntuacion() const
 void MainWindow::setPuntuacion(int newPuntuacion)
 {
     puntuacion = newPuntuacion;
+}
+
+void MainWindow::puntuacionTotal()
+{
+    static int cont=0;
+    if(cont==15){
+        puntuacion=bonu->getPuntuacion();
+        qDebug() << "la puntuacion total es"<<puntuacion;
+        cont=0;
+    }
+    cont++;
+
+
 }
 

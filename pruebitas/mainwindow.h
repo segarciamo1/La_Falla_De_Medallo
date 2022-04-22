@@ -29,6 +29,8 @@ public:
 
     int getPuntuacion() const;
     void setPuntuacion(int newPuntuacion);
+public slots:
+    void puntuacionTotal();
 
 private:
     Ui::MainWindow *ui;
